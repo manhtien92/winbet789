@@ -74,20 +74,20 @@
 		            	<ul class="dropdown-menu">
           					<li>
           						<a href="#">
-          							<h3>C-SPORTS</h3>
-          							<p>Thiết kế theo yêu cầu khách hàng</p>
+          							<img src="{{ URL::asset('assets/img/client/nav/hdr_submn_csports.gif') }}">
+          							<p>C-SPORTS</p>
           						</a>
           					</li>
           					<li>
           						<a href="#">
-          							<h3>I-SPORTS</h3>
-          							<p>Tiết kiệm chi phí</p>
+          							<img src="{{ URL::asset('assets/img/client/nav/hdr_submn_lvcsn_ic.gif') }}">
+          							<p>I-SPORTS</p>
           						</a>
           					</li>
           					<li>
           						<a href="#">
-          							<h3>S-SPORTS</h3>
-          							<p>Tiết kiệm chi phí</p>
+          							<img src="{{ URL::asset('assets/img/client/nav/hdr_submn_ssports.gif') }}">
+          							<p>S-SPORTS</p>
           						</a>
           					</li>
         				</ul>
@@ -99,22 +99,28 @@
 		            	<ul class="dropdown-menu">
           					<li>
           						<a href="#">
-          							<h3>C-SPORTS</h3>
-          							<p>Thiết kế theo yêu cầu khách hàng</p>
+          							<img src="{{ URL::asset('assets/img/client/nav/hdr_submn_lvcsn_gp.gif') }}">
+                        <p>GP CASINO</p>
           						</a>
           					</li>
           					<li>
           						<a href="#">
-          							<h3>I-SPORTS</h3>
-          							<p>Tiết kiệm chi phí</p>
+          							<img src="{{ URL::asset('assets/img/client/nav/hdr_submn_lvcsn_allbet.gif') }}">
+                        <p>ALLBET CASINO</p>
           						</a>
           					</li>
           					<li>
           						<a href="#">
-          							<h3>S-SPORTS</h3>
-          							<p>Tiết kiệm chi phí</p>
+          							<img src="{{ URL::asset('assets/img/client/nav/hdr_submn_lvcsn_ag.gif') }}">
+                        <p>AG CASINO</p>
           						</a>
           					</li>
+                    <li>
+                      <a href="#">
+                        <img src="{{ URL::asset('assets/img/client/nav/hdr_submn_lvcsn_pt.gif') }}">
+                        <p>PT CASINO</p>
+                      </a>
+                    </li>
         				</ul>
 		            </li>
 		            <li class="dropdown ">
@@ -149,20 +155,20 @@
 		            	<ul class="dropdown-menu">
           					<li>
           						<a href="#">
-          							<h3>C-SPORTS</h3>
-          							<p>Thiết kế theo yêu cầu khách hàng</p>
+          							<img src="{{ URL::asset('assets/img/client/nav/keno.gif') }}">
+                        <p>KENO</p>
           						</a>
           					</li>
           					<li>
           						<a href="#">
-          							<h3>I-SPORTS</h3>
-          							<p>Tiết kiệm chi phí</p>
+          							<img src="{{ URL::asset('assets/img/client/nav/ilotto.gif') }}">
+                        <p>I LOTTO</p>
           						</a>
           					</li>
           					<li>
           						<a href="#">
-          							<h3>S-SPORTS</h3>
-          							<p>Tiết kiệm chi phí</p>
+          							<img src="{{ URL::asset('assets/img/client/nav/4d.gif') }}">
+                        <p>ISIN4D</p>
           						</a>
           					</li>
         				</ul>

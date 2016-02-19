@@ -2,6 +2,16 @@
 	.container{
 		width: 1020px
 	}
+	.navbar-nav li ul li{
+		float: left;
+	}
+	.nav>li, .dropdown, .dropup{
+		position: initial;
+	}
+	.dropdown-menu{
+		width: 1020px
+	}
+
 }
 
 

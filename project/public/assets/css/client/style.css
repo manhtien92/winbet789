@@ -110,3 +110,33 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="fil
 .log-btn {
     background-color: transparent !important;
 }
+.ico-mobile {
+    background-image: url(../../img/client/hdr_mn_icon_mobile_of.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    padding: 15px 20px;
+}
+header .nav > li {
+    background-image: url(../../img/client/hdr_mn_dv.gif);
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+.navbar-default .navbar-nav>li>a {
+    height: 30px;
+    padding: 7px 15px;
+    color: #fff;
+    font-size: 14px;
+}
+.navbar-default {
+    border: none
+}
+sup.new{
+    background: red;
+    font-size: 9px;
+    margin-left: 2px;
+    padding: 1px 3px;
+}
+.alert-main a{
+    color: #ed1c24 !important;
+
+}

@@ -1,0 +1,38 @@
+.navbar-default{
+	background-image: url(../../img/client/hdr_mn_bar.gif);
+    background-position: center;
+    background-repeat: repeat-x;
+    font-weight: bold;
+    height: 31px;
+    min-height: 31px;
+    border-radius: 2px
+}
+.ico-home {
+    background-image: url(../../img/client/hdr_mn_icon_home_of.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    padding: 15px 20px;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	background-image: url(../../img/client/hdr_mn_on.gif);
+    background-repeat: repeat-x;
+    height: 31px;
+    min-height: 31px;
+}
+.header .nav > li > a {
+    font-size: 14px;
+    padding: 7px 7px;
+    color: #FFF
+}
+header li.active {
+    background-image: url(../../img/client/hdr_mn_on.gif);
+    background-repeat: repeat-x;
+    height: 31px;
+    min-height: 31px;
+}
+.navbar-default .navbar-nav>.active>a{
+	background-color: transparent !important;
+}
+.ico-home {
+    padding: 15px 20px!important;
+}

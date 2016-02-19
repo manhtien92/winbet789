@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'my-font';
+    src: url('../../font/roboto-light.woff') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    background-color: #205564;
+    background-image: url(../../img/client/bg_cny16.jpg);
+    background-position: center top;
+    background-position: center top;
+    background-repeat: repeat-x;
+    color: rgb(210, 215, 221);
+    font-family: Tahoma, Geneva, sans-serif, 微软雅黑;
+    font-size: 12px;
+}
+li{
+    list-style: none
+}
+a:hover{
+    color: rgb(155, 172, 180) !important;
+    text-decoration: none
+}
+.left{
+    float: left;
+}
+.right{
+    float: right
+}
+.header .contact ul li{
+    float: left;
+    border-right: dashed 1px #498f9a;
+    margin: 2px 0px 0px 0px;
+    padding-right: 8px;
+    padding-left: 5px;
+}    
+.header .contact ul li a{
+    color: rgb(210, 215, 221);
+}
+.ico-livechat {
+    background: url(../../img/client/hdr_icon_chat.png) no-repeat 0% 50%;
+    cursor: pointer;
+    padding: 2px 0px 2px 20px;
+}
+.ico-dropdown .btn {
+    background-color: transparent !important;
+    background-image: none;
+    border: none;
+    height: 17px;
+    margin: 0px;
+    margin-top: -6px;
+    padding: 0px;
+    width: 38px;
+}
+.ico-down {
+    background-image: url(../../img/client/hdr_icon_drop.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 4px;
+}
+#login-form{
+    margin-bottom: 3px
+}
+#login-form input{
+    float: left
+}
+input[type="text"], input[type="password"] {
+    background-color: rgb(23, 74, 92);
+    border: 1px solid rgb(86, 124, 137);
+    color: rgb(210, 215, 221);
+    height: 27px !important;
+    margin: 0px 2px;
+    padding: 0px 3px;
+    width: 120px;
+}
+input[type="button"], input[type="submit"], input[type="reset"], input[type="file"], button {
+    background-image: url(../../img/client/hdr_btn_login.png);
+    background-position: center center;
+    background-repeat: repeat-x;
+    border: none;
+    color: rgb(48, 64, 70);
+    cursor: pointer;
+    font-weight: bold;
+    height: 28px;
+    width: 66px;
+}
+.header .input-notice > span {
+    background: url(../../img/client/notice_front.png) no-repeat;
+    float: left;
+    font-weight: bold;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    width: 68px;
+}
+.header .input-notice > em {
+    background: url(../../img/client/notice_back.png) repeat-x 0 -1px;
+    float: left;
+    font-style: normal;
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    padding: 0 5px;
+    text-align: center;
+    width: 300px;
+}
+.light, a.light, a.light:link, .light a, .light a:link {
+    color: #40fdfd;
+}
+.log-btn {
+    background-color: transparent !important;
+}

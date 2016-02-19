@@ -59,6 +59,174 @@
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		        <ul class="nav navbar-nav">
+		        	<li class="dropdown active">
+		            	<a class="ico-home" href="#">
+		            	</a>
+		            </li>
+		            <li class="dropdown ">
+		            	<a class="ico-mobile" href="#">
+		            	</a>
+		            </li>
+		            <li class="dropdown ">
+		            	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		            		SPORTS
+		            	</a>
+		            	<ul class="dropdown-menu">
+          					<li>
+          						<a href="#">
+          							<h3>C-SPORTS</h3>
+          							<p>Thiết kế theo yêu cầu khách hàng</p>
+          						</a>
+          					</li>
+          					<li>
+          						<a href="#">
+          							<h3>I-SPORTS</h3>
+          							<p>Tiết kiệm chi phí</p>
+          						</a>
+          					</li>
+          					<li>
+          						<a href="#">
+          							<h3>S-SPORTS</h3>
+          							<p>Tiết kiệm chi phí</p>
+          						</a>
+          					</li>
+        				</ul>
+		            </li>
+		            <li class="dropdown ">
+		            	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		            		LIVE CASINO <sup class="new">NEW</sup>
+		            	</a>
+		            	<ul class="dropdown-menu">
+          					<li>
+          						<a href="#">
+          							<h3>C-SPORTS</h3>
+          							<p>Thiết kế theo yêu cầu khách hàng</p>
+          						</a>
+          					</li>
+          					<li>
+          						<a href="#">
+          							<h3>I-SPORTS</h3>
+          							<p>Tiết kiệm chi phí</p>
+          						</a>
+          					</li>
+          					<li>
+          						<a href="#">
+          							<h3>S-SPORTS</h3>
+          							<p>Tiết kiệm chi phí</p>
+          						</a>
+          					</li>
+        				</ul>
+		            </li>
+		            <li class="dropdown ">
+		            	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		            		E-GAMES <sup class="new">NEW</sup>
+		            	</a>
+		            	<ul class="dropdown-menu">
+          					<li>
+          						<a href="#">
+          							<h3>C-SPORTS</h3>
+          							<p>Thiết kế theo yêu cầu khách hàng</p>
+          						</a>
+          					</li>
+          					<li>
+          						<a href="#">
+          							<h3>I-SPORTS</h3>
+          							<p>Tiết kiệm chi phí</p>
+          						</a>
+          					</li>
+          					<li>
+          						<a href="#">
+          							<h3>S-SPORTS</h3>
+          							<p>Tiết kiệm chi phí</p>
+          						</a>
+          					</li>
+        				</ul>
+		            </li>
+		            <li class="dropdown ">
+		            	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		            		LOTTERY
+		            	</a>
+		            	<ul class="dropdown-menu">
+          					<li>
+          						<a href="#">
+          							<h3>C-SPORTS</h3>
+          							<p>Thiết kế theo yêu cầu khách hàng</p>
+          						</a>
+          					</li>
+          					<li>
+          						<a href="#">
+          							<h3>I-SPORTS</h3>
+          							<p>Tiết kiệm chi phí</p>
+          						</a>
+          					</li>
+          					<li>
+          						<a href="#">
+          							<h3>S-SPORTS</h3>
+          							<p>Tiết kiệm chi phí</p>
+          						</a>
+          					</li>
+        				</ul>
+		            </li>
+		            <li class="dropdown ">
+		            	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		            		POKER
+		            	</a>
+		            	<ul class="dropdown-menu">
+          					<li>
+          						<a href="#">
+          							<h3>C-SPORTS</h3>
+          							<p>Thiết kế theo yêu cầu khách hàng</p>
+          						</a>
+          					</li>
+          					<li>
+          						<a href="#">
+          							<h3>I-SPORTS</h3>
+          							<p>Tiết kiệm chi phí</p>
+          						</a>
+          					</li>
+          					<li>
+          						<a href="#">
+          							<h3>S-SPORTS</h3>
+          							<p>Tiết kiệm chi phí</p>
+          						</a>
+          					</li>
+        				</ul>
+		            </li>
+		            <li class="dropdown ">
+		            	<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+		            		PROMOTION
+		            	</a>
+		            	<ul class="dropdown-menu">
+          					<li>
+          						<a href="#">
+          							<h3>C-SPORTS</h3>
+          							<p>Thiết kế theo yêu cầu khách hàng</p>
+          						</a>
+          					</li>
+          					<li>
+          						<a href="#">
+          							<h3>I-SPORTS</h3>
+          							<p>Tiết kiệm chi phí</p>
+          						</a>
+          					</li>
+          					<li>
+          						<a href="#">
+          							<h3>S-SPORTS</h3>
+          							<p>Tiết kiệm chi phí</p>
+          						</a>
+          					</li>
+        				</ul>
+		            </li>
+		            <li class="dropdown alert-main">
+		            	<a href="#">
+		            		REFERRAL
+		            	</a>
+		            </li>
+		            <li class="dropdown alert-main">
+		            	<a href="#">
+		            		JOIN NOW
+		            	</a>
+		            </li>
 		        </ul>
 		    </div>
 		</nav>

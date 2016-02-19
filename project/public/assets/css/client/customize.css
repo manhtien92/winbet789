@@ -50,3 +50,27 @@ header li.active {
     border: 2px solid #184859;
     background-color: #072b40
 }
+.bx-wrapper .bx-viewport{
+    border: none !important
+}
+#home_big_banner{
+    width: 
+}
+.right-slider{
+    padding: 0
+}
+.progressive-en {
+    background-image: url('../../img/client/hm_progressive_en.png');
+    float: left;
+    height: 150px;
+    width: 100%;
+}
+.progressive > .number {
+    font-size: 48px;
+    height: 67px;
+    line-height: 67px;
+    margin-left: 360px;
+    margin-top: 40px;
+    text-align: center;
+    width: 648px;
+}

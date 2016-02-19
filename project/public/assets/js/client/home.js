@@ -21,5 +21,13 @@ var Home = {
             controls: true,
             adaptiveHeight: true
         });
+        $('.right-slider').bxSlider({
+            mode:'vertical',
+            speed: 1000,
+            auto: true,
+            pager: false,
+            controls: true,
+            adaptiveHeight: true
+        });
     }
 }

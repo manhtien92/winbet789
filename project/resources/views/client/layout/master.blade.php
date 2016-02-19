@@ -10,7 +10,7 @@
         @include('client.include.header')
     </header>
 
-    <div id="main">
+    <div id="main" class="row">
 
             @yield('content')
 

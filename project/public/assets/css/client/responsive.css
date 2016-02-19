@@ -11,7 +11,16 @@
 	.dropdown-menu{
 		width: 1020px
 	}
-
+	#home_big_banner{
+	    width: 671px
+	}
+	.small-slider{
+		width: 345px
+	}
+	.right-slider img{
+		width: 345px;
+		height: 166px
+	}
 }
 
 

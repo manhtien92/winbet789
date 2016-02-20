@@ -13,6 +13,7 @@
 
 Route::get('/', 'client\HomeController@index');
 
+Route::get('/admin', 'admin\HomeController@index');
 /*
 |--------------------------------------------------------------------------
 | Application Routes

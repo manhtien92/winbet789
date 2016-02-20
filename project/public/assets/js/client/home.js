@@ -9,6 +9,12 @@ var Home = {
 
     attachEvent : function () {
         var self = this;
+        self.element
+            .on('click', '.nav li.dropdown', function() {
+                $('.nav li.dropdown').removeClass('open');
+                $('.nav li.dropdown').removeClass('active');
+                $(this).addClass('active');
+            })
     },
 
     // Attach normal slider

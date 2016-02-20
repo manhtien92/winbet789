@@ -39,6 +39,7 @@ header li.active {
 .dropdown-menu>li>a{
     color: #fff;
     text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0);;
 }
 .dropdown-menu>li>a img{
     height: 120px
@@ -73,4 +74,7 @@ header li.active {
     margin-top: 40px;
     text-align: center;
     width: 648px;
+}
+a.dropdown-toggle:hover{
+    
 }

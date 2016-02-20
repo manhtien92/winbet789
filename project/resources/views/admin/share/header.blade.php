@@ -24,7 +24,7 @@
     <link href="{{ URL::asset('assets/admin/dist/css/sb-admin-2.css')}}" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="{{ URL::asset('assets/admin/bower_components/morrisjs/morris.css')}}" rel="stylesheet">
+    {{--<link href="{{ URL::asset('assets/admin/bower_components/morrisjs/morris.css')}}" rel="stylesheet">--}}
 
     <!-- Custom Fonts -->
     <link href="{{ URL::asset('assets/admin/bower_components/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
@@ -50,7 +50,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">ag.hokibet188</a>
+            <a class="navbar-brand" href="admin">ag.hokibet188</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -278,8 +278,21 @@
                         </div>
                         <!-- /input-group -->
                     </li>
+
                     <li>
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Transactions</a>
+                        <a href="#"><i class="fa fa-dashboard fa-fw"></i> Transactions<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{{ URL::asset('./admin')}}">Deposit</a>
+                            </li>
+                            <li>
+                                <a href="{{ URL::asset('admin')}}">Withdraw</a>
+                            </li>
+                            <li>
+                                <a href="admin">Transfer</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
@@ -390,9 +403,9 @@
 <script src="{{ URL::asset('assets/admin/bower_components/metisMenu/dist/metisMenu.min.js')}}"></script>
 
 <!-- Morris Charts JavaScript -->
-<script src="{{ URL::asset('assets/admin/bower_components/raphael/raphael-min.js')}}"></script>
-<script src="{{ URL::asset('assets/admin/bower_components/morrisjs/morris.min.js')}}"></script>
-<script src="{{ URL::asset('assets/admin/js/morris-data.js')}}"></script>
+{{--<script src="{{ URL::asset('assets/admin/bower_components/raphael/raphael-min.js')}}"></script>--}}
+{{--<script src="{{ URL::asset('assets/admin/bower_components/morrisjs/morris.min.js')}}"></script>--}}
+{{--<script src="{{ URL::asset('assets/admin/js/morris-data.js')}}"></script>--}}
 
 <!-- Custom Theme JavaScript -->
 <script src="{{ URL::asset('assets/admin/dist/js/sb-admin-2.js')}}"></script>

@@ -91,7 +91,7 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="fil
     height: 22px;
     line-height: 22px;
     text-align: center;
-    width: 68px;
+    width: 20%;
 }
 .header .input-notice > em {
     background: url(../../img/client/notice_back.png) repeat-x 0 -1px;
@@ -102,7 +102,7 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="fil
     overflow: hidden;
     padding: 0 5px;
     text-align: center;
-    width: 300px;
+    width: 80%;
 }
 .light, a.light, a.light:link, .light a, .light a:link {
     color: #40fdfd;
@@ -139,4 +139,18 @@ sup.new{
 .alert-main a{
     color: #ed1c24 !important;
 
+}
+.method li{
+    float: left;
+    padding: 0 9px;
+    border-right: dashed 1px #498f9a;
+}
+.method li:last-child{
+    border-right: none
+}
+.method li a{
+    color: #fff
+}
+.white{
+    color: white
 }

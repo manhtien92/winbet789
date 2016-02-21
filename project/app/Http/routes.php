@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'client\HomeController@index');
+
 
 Route::get('/admin', 'admin\HomeController@index');
 /*
@@ -24,5 +24,9 @@ Route::get('/admin', 'admin\HomeController@index');
 | kernel and includes session state, CSRF protection, and more.
 |
 */
+Route::group(['middleware' => ['web']], function () {
+	Route::get('/', 'client\HomeController@index');
+    Route::post('auth', 'Auth\AuthController@auth');
+    Route::get('logout', 'Auth\AuthController@logout');
+});
 
-Route::post('auth', 'Auth\AuthController@auth');

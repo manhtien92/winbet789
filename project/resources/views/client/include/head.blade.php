@@ -18,3 +18,11 @@
 <script src="{{ URL::asset('assets/js/lib/jquery/jquery-2.1.4.min.js') }}"></script>
 <script src="{{ URL::asset('assets/third-party/bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ URL::asset('assets/third-party/bxslider/jquery.bxslider.min.js') }}"></script>
+
+<script src="{{ URL::asset('assets/js/client/app/auth.js') }}"></script>
+<script type="text/javascript">
+	var baseUrl = "{{ URL::to('/') }}" + '/';
+	$(document).ready(function () {
+		Auth.init();
+	});
+</script>

@@ -32,9 +32,9 @@
 			</div>
 			<div class="row">
 				<form id="login-form" class="right">
-                    <input placeholder="USERNAME" name="UID" type="text" id="UID" maxlength="30" required="true" value="">
-                    <input placeholder="PASSWORD" id="PWD" name="PWD" type="password" maxlength="256" required="true" value="">
-                    <input type="submit" onclick=" login() " value="Log In" class="log-btn">
+                    <input placeholder="USERNAME" type="text" id="ip-email" maxlength="30" required="true" value="">
+                    <input placeholder="PASSWORD" id="ip-password" type="password" maxlength="256" required="true" value="">
+                    <input type="submit" id="btn-login" value="Log In" class="log-btn">
                     <img src="{{ URL::asset('assets/img/client/hdr_icon_lock.png') }}" width="16" height="16" border="0">
                 </form>
 			</div>

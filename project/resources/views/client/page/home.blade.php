@@ -47,5 +47,5 @@
 			Home.init();
 		});
 	</script>
-	<script src="{{ URL::asset('assets/js/client/home.js') }}"></script>
+	<script src="{{ URL::asset('assets/js/client/app/home.js') }}"></script>
 @endsection

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Auth;
 use App\User;
 use Validator;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -56,17 +58,19 @@ class AuthController extends Controller
     }
 
     /**
-     * Create a new user instance after a valid registration.
+     * Handle a login request to the application.
      *
-     * @param  array  $data
-     * @return User
+     * @param  auth  $request
+     * @return Response
      */
-    protected function create(array $data)
+    public function auth(Request $request)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        if (Auth::attempt($request->only('email', 'password'), TRUE))
+        {
+            echo json_encode(array('result' => true));
+        } else
+        {
+            return response()->json(['result' => 'false'], 403);
+        }
     }
 }

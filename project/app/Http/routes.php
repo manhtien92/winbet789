@@ -25,6 +25,4 @@ Route::get('/admin', 'admin\HomeController@index');
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
+Route::post('auth', 'Auth\AuthController@auth');

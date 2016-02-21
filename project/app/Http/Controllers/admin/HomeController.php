@@ -12,7 +12,8 @@ class HomeController extends Controller
 
     public function index()
     {
-        return view('admin/index');
+        $url_node = $_ENV['URL_NODE'];
+        return view('admin/index',compact(['url_node']));
     }
 
     /**

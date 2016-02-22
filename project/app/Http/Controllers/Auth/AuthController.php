@@ -65,12 +65,24 @@ class AuthController extends Controller
      */
     public function auth(Request $request)
     {
-        if (Auth::attempt($request->only('email', 'password'), TRUE))
+        if (Auth::attempt($request->only('email', 'password'), true))
         {
-            echo json_encode(array('result' => true));
+            return response()->json(['result' => 'true'], 200);
         } else
         {
-            return response()->json(['result' => 'false'], 403);
+            return response()->json(['result' => 'false'], 401);
         }
+    }
+
+    /**
+     * Handle a logout request to the application.
+     *
+     * @param  auth  $request
+     * @return Response
+     */
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        return redirect('/');
     }
 }

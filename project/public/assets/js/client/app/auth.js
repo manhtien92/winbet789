@@ -22,7 +22,7 @@ var Auth = {
             dataType: "json",
             type    : "POST",
             url     : baseUrl + 'auth',
-            data    : self.getCreds(),
+            data    : self.el.serialize(),
             success: function( data ){
                 if ( data['result'] ) {
                     location.reload();
@@ -32,14 +32,4 @@ var Auth = {
             }
         });
     },
-
-    getCreds : function () {
-        var self = this;
-        var creds = {
-            email : self.el.find('#ip-email').val(),
-            password : self.el.find('#ip-password').val()
-        }
-        console
-        return creds;
-    }
 }

@@ -31,20 +31,55 @@
                 </ul>
 			</div>
 			<div class="row">
+        @if ( !$auth )
 				<form id="login-form" class="right">
-                    <input placeholder="USERNAME" type="text" id="ip-email" maxlength="30" required="true" value="">
-                    <input placeholder="PASSWORD" id="ip-password" type="password" maxlength="256" required="true" value="">
-                    <input type="submit" id="btn-login" value="Log In" class="log-btn">
-                    <img src="{{ URL::asset('assets/img/client/hdr_icon_lock.png') }}" width="16" height="16" border="0">
-                </form>
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input placeholder="USERNAME" type="text" name="email" maxlength="30" required="true" value="">
+            <input placeholder="PASSWORD" name="password" type="password" maxlength="256" required="true" value="">
+            <input type="submit" id="btn-login" value="Log In" class="log-btn">
+            <img src="{{ URL::asset('assets/img/client/hdr_icon_lock.png') }}" width="16" height="16" border="0">
+        </form>
+        @else
+            <div class="col-md-offset-5 col-md-2">
+              <p class="right">Hi, {!! $auth['name'] !!}</p>
+            </div>
+            <div class="col-md-3">
+              <p class="right"><span id="main-balance"></span> IDR</p>
+            </div>
+            <div class="right">
+              <a class="white" href="{{ URL::to('/logout') }}">[ logout ]</a>
+            </div>
+        @endif
 			</div>
 			<div class="row">
-				<div class="input-notice left">
-                    <span>NOTICE</span><em id="Notice"><marquee scrollamount="2" onmouseout="this.start()" onmouseover="this.stop()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - QQ288.COM HOLD REGULAR GAMING LICENSE IN PHILIPPINES GOVERNMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-  PROMO EXTRA BONUS 100% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- TOURNAMENT LIVE CASINO BY TURNOVER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- NOW AG CASINO AND PLAYTECH ALREADY CAN ACCESS IN ANDROID SMARTPHONE</marquee></em>
-                </div>
-                <div class="right">
-                	<a class="light" href="ForgetPassword">Forget login details?</a>
-                </div>
+				<div class="input-notice col-md-6">
+            <span>NOTICE</span><em id="Notice"><marquee scrollamount="2" onmouseout="this.start()" onmouseover="this.stop()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - QQ288.COM HOLD REGULAR GAMING LICENSE IN PHILIPPINES GOVERNMENT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-  PROMO EXTRA BONUS 100% &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- TOURNAMENT LIVE CASINO BY TURNOVER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- NOW AG CASINO AND PLAYTECH ALREADY CAN ACCESS IN ANDROID SMARTPHONE</marquee></em>
+        </div>
+        <div class="col-md-6">
+          @if ( !$auth )
+        	<a class="light right" href="ForgetPassword">Forget login details?</a>
+          @else
+          <div class="row">
+            <ul class="method right">
+              <li>
+                <a href="#">Deposit</a>
+              </li>
+              <li>
+                <a href="#">Transfer</a>
+              </li>
+              <li>
+                <a href="#">Withdrawal</a>
+              </li>
+              <li>
+                <a href="#">Profile</a>
+              </li>
+              <li>
+                <a href="#">Report</a>
+              </li>
+            </ul>
+          </div>
+          @endif
+        </div>
 			</div>
 		</div>
 	</div>

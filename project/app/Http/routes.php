@@ -24,5 +24,7 @@ Route::get('/admin', 'admin\HomeController@index');
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-
+//Route::get('getPass', function(){
+//    echo Hash::make('lamtanphiho1');
+//});
 Route::post('auth', 'Auth\AuthController@auth');

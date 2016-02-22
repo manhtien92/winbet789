@@ -20,7 +20,7 @@ app.all('/secret', function (req, res, next) {
 io.on('connection', function(client) {
     console.log('Client connected...');
 
-    client.on('ag', function(data) {
+    client.on('agMsg', function(data) {
         console.log(data);
     });
 

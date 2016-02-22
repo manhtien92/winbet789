@@ -264,7 +264,7 @@
 		            	</a>
 		            </li>
 		            <li class="dropdown alert-main">
-		            	<a href="#">
+		            	<a href="{{ URL::to('register') }}">
 		            		JOIN NOW
 		            	</a>
 		            </li>

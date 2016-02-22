@@ -25,8 +25,16 @@ Route::get('/admin', 'admin\HomeController@index');
 |
 */
 Route::group(['middleware' => ['web']], function () {
+	// Home page
 	Route::get('/', 'client\HomeController@index');
+
+	// User login
     Route::post('auth', 'Auth\AuthController@auth');
+
+    // User logout
     Route::get('logout', 'Auth\AuthController@logout');
+
+    // Get register view
+    Route::get('register', 'Auth\AuthController@register');
 });
 

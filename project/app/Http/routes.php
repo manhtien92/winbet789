@@ -10,9 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
-Route::get('/', 'client\HomeController@index');
-
 Route::get('/admin', 'admin\HomeController@index');
 /*
 |--------------------------------------------------------------------------
@@ -27,4 +24,8 @@ Route::get('/admin', 'admin\HomeController@index');
 //Route::get('getPass', function(){
 //    echo Hash::make('lamtanphiho1');
 //});
-Route::post('auth', 'Auth\AuthController@auth');
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/', 'client\HomeController@index');
+    Route::post('auth', 'Auth\AuthController@auth');
+    Route::get('logout', 'Auth\AuthController@logout');
+});

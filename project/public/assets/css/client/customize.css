@@ -1,9 +1,8 @@
 .navbar-default{
-	background-image: url(../../img/client/hdr_mn_bar.gif);
-    background-position: center;
-    background-repeat: repeat-x;
+	background: #db6e4b;
+    border: 1px solid #f6dad2;
     font-weight: bold;
-    height: 31px;
+    height: 32px;
     min-height: 31px;
     border-radius: 2px
 }
@@ -31,7 +30,7 @@ header li.active {
     min-height: 31px;
 }
 .navbar-default .navbar-nav>.active>a{
-	background-color: transparent !important;
+	background-color: #c9aa5f;
 }
 .ico-home {
     padding: 15px 20px!important;

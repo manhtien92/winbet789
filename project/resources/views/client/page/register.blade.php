@@ -39,6 +39,10 @@
 						</div>
 						<div class="col-md-6">
 							<input name="email" placeholder="Email Address" />
+							<div class="ip-notice">
+								Important*</br>
+								Correct email address is required for Password retrieval
+							</div>
 						</div>
 					</div>
 					<div class="row">
@@ -63,6 +67,10 @@
 						</div>
 						<div class="col-md-6">
 							<input name="phone" placeholder="Your phone" />
+							<div class="ip-notice">
+								Important*
+								Please fill in the correct phone number, in order to make you easier when need to reset password
+							</div>
 						</div>
 					</div>
 					<div class="row">
@@ -111,6 +119,10 @@
 						</div>
 						<div class="col-md-6">
 							<input name="bank-account-number" placeholder="Email Address" />
+							<div class="ip-notice">
+								Important*
+								Please fill in the correct bank account number, in order to be easier when need to do withdrawal
+							</div>
 						</div>
 					</div>
 					<div class="row">

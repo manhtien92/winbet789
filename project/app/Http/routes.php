@@ -10,9 +10,6 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
-
-
 Route::get('/admin', 'admin\HomeController@index');
 /*
 |--------------------------------------------------------------------------
@@ -24,11 +21,18 @@ Route::get('/admin', 'admin\HomeController@index');
 | kernel and includes session state, CSRF protection, and more.
 |
 */
+//Route::get('getPass', function(){
+//    echo Hash::make('lamtanphiho1');
+//});
 Route::group(['middleware' => ['web']], function () {
+<<<<<<< HEAD
 	// Home page
 	Route::get('/', 'client\HomeController@index');
 
 	// User login
+=======
+    Route::get('/', 'client\HomeController@index');
+>>>>>>> 9f75dd6019390217c061e3bdbd167bb04206f609
     Route::post('auth', 'Auth\AuthController@auth');
 
     // User logout
@@ -37,4 +41,3 @@ Route::group(['middleware' => ['web']], function () {
     // Get register view
     Route::get('register', 'Auth\AuthController@register');
 });
-

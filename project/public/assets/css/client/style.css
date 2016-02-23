@@ -5,8 +5,7 @@
     font-style: normal;
 }
 body {
-    background-color: #205564;
-    background-image: url(../../img/client/bg_cny16.jpg);
+    background-color: #d24a1f;
     background-position: center top;
     background-position: center top;
     background-repeat: repeat-x;
@@ -74,27 +73,29 @@ input[type="text"], input[type="password"] {
     width: 120px;
 }
 input[type="button"], input[type="submit"], input[type="reset"], input[type="file"], button {
-    background-image: url(../../img/client/hdr_btn_login.png);
-    background-position: center center;
-    background-repeat: repeat-x;
-    border: none;
-    color: rgb(48, 64, 70);
+    background-color: #4c4023;
+    border: 1px solid #ffebbb;
     cursor: pointer;
     font-weight: bold;
-    height: 28px;
+    height: 27px;
     width: 66px;
 }
 .header .input-notice > span {
-    background: url(../../img/client/notice_front.png) no-repeat;
+    background: #c9aa5f;
+    border: 1px solid #998147;
     float: left;
+    color: #fff;
     font-weight: bold;
     height: 22px;
     line-height: 22px;
     text-align: center;
     width: 20%;
 }
+.header{
+    padding-bottom: 10px
+}
 .header .input-notice > em {
-    background: url(../../img/client/notice_back.png) repeat-x 0 -1px;
+    background: #4c4023;
     float: left;
     font-style: normal;
     height: 22px;
@@ -107,9 +108,6 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="fil
 .light, a.light, a.light:link, .light a, .light a:link {
     color: #40fdfd;
 }
-.log-btn {
-    background-color: transparent !important;
-}
 .ico-mobile {
     background-image: url(../../img/client/hdr_mn_icon_mobile_of.png) !important;
     background-repeat: no-repeat !important;
@@ -117,7 +115,7 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="fil
     padding: 15px 20px;
 }
 header .nav > li {
-    background-image: url(../../img/client/hdr_mn_dv.gif);
+    background: #db6e4b;
     background-position: right top;
     background-repeat: no-repeat;
 }
@@ -137,7 +135,7 @@ sup.new{
     padding: 1px 3px;
 }
 .alert-main a{
-    color: #ed1c24 !important;
+    color: #ffdf92 !important;
 
 }
 .method li{
@@ -155,7 +153,8 @@ sup.new{
     color: white
 }
 #register{
-    background-color: #d24a1f;
+    background-color: #072b40;
+    border: 1px solid #a0a4ae;
     padding: 30px 0;
     color: #fff;
     border-radius: 2px
@@ -172,8 +171,8 @@ sup.new{
 input, select{
     line-height: 27px;
     height: 27px;
-    background-color: #5d210e;
-    border: 1px solid #f6baa7;
+    background-color: #8d929d;
+    border: 1px solid #b3b6be;
     padding: 0px 3px;
     border-radius: 2px
 }
@@ -194,5 +193,9 @@ input, select{
     padding: 7px 0
 }
 .option-register span.active{
-    background-color: red
+    background-color: #072b40;
+    border-radius: 2px
+}
+.ip-notice{
+    color: #fd482f
 }

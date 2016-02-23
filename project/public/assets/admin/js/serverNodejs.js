@@ -4,7 +4,7 @@
 try{
     var socket = io.connect('http://localhost:1888');
     socket.on('connect', function(data) {
-        socket.emit('ag', 'Hello World i am admin');
+        socket.emit('agMsg', 'Hello World i am admin');
     });
 }catch(e){
     setTimeout(function() {

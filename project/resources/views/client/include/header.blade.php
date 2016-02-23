@@ -2,7 +2,7 @@
 	<div class="row header">
 		<div class="col-md-3">
 			<a href="home">
-				<img src="{{ URL::asset('assets/img/client/hdr_logo.png') }}">
+				<h1 style="color:#fff;font-size:30px">HOKIBET188</h1>
 			</a>
 		</div>
 		<div class="col-md-9">
@@ -16,9 +16,6 @@
                     </li>
                     <li>
                     	<a target="_blank" href="help/contact">CONTACT US</a>
-                    </li>
-                    <li>
-                    	<a target="_blank" style="color: red;" href="#">Affiliate</a>
                     </li>
                     <li>
                         <div class="btn-group ico-dropdown">

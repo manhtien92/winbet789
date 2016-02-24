@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use Auth;
+use Hash;
 use Session;
 use App\User;
 use Validator;
@@ -52,10 +53,47 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|confirmed|min:6',
+            'name'      => 'required|min:3|max:60',
+            'email'     => 'required|email|max:60|unique:users',
+            'password'  => 'required|confirmed|min:6|max:20',
+            'phone'     => 'required|min:6|max:20',
+            'currency'  => 'required|size:3',
+            'bank_name' => 'required|min:6|max:60',
+            'bank_account_number'   => 'required|min:6|max:30',
+            'bank_account_name'     => 'required|min:6|max:30',
         ]);
+    }
+
+    /**
+     * Handle a user request to create new user.
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function create(Request $request)
+    {
+        // Run validator
+        $validator = $this->validator( $request->all() );
+
+        // Throw error if validate fail
+        if ( $validator->fails() ) {
+
+            $result = array(
+                'result'    => FALSE,
+                'data'      => $validator->messages()->toArray()
+            );
+            return response()->json($result, 403);
+
+        } else {
+            $user = $request->only('name', 'email', 'password', 'phone', 'currency', 'bank_name', 'bank_account_number', 'bank_account_name' );
+            $user['password'] = Hash::make($user['password']);
+
+            $user = User::create($user);
+
+            if ($user) {
+                return response()->json(['result' => TRUE], 200);
+            }
+        }
     }
 
     /**
@@ -90,7 +128,7 @@ class AuthController extends Controller
             ));
         } else
         {
-            return response()->json(['result' => FALSE], 401);
+            return response()->json(['result' => FALSE], 403);
         }
     }
 
@@ -105,4 +143,5 @@ class AuthController extends Controller
         Auth::logout();
         return redirect('/');
     }
+
 }

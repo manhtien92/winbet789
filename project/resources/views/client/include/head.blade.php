@@ -9,6 +9,7 @@
 
 <!-- Import Css -->
 <link rel="stylesheet" href="{{ URL::asset('assets/third-party/bootstrap/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('assets/third-party/jquery-ui-1.11.4/jquery-ui.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('assets/css/client/style.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('assets/css/client/customize.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('assets/css/client/responsive.css') }}">
@@ -16,6 +17,7 @@
 
 <!-- Import Javascript -->
 <script src="{{ URL::asset('assets/js/lib/jquery/jquery-2.1.4.min.js') }}"></script>
+<script src="{{ URL::asset('assets/third-party/jquery-ui-1.11.4/jquery-ui.min.js') }}"></script>
 <script src="{{ URL::asset('assets/third-party/bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ URL::asset('assets/third-party/bxslider/jquery.bxslider.min.js') }}"></script>
 <script src="assets/admin/js/socket.io.js"></script>

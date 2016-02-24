@@ -37,7 +37,7 @@
             <img src="{{ URL::asset('assets/img/client/hdr_icon_lock.png') }}" width="16" height="16" border="0">
         </form>
         @else
-            <div class="col-md-offset-5 col-md-2">
+            <div class="col-md-offset-3 col-md-4">
               <p class="right">Hi, {!! $auth['name'] !!}</p>
             </div>
             <div class="col-md-3">

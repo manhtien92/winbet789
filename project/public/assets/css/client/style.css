@@ -166,7 +166,8 @@ sup.new{
     border-radius: 2px
 }
 .header-register{
-    background-color: rgba(0, 0, 0, 0.7)
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #a0a4ae
 }
 .option-register{
     cursor: pointer;
@@ -204,5 +205,23 @@ input, select{
     border-radius: 2px
 }
 .ip-notice{
+    color: #9890af
+}
+.ip-error, .required{
     color: #fd482f
+}
+.required{
+    font-size: 15px;
+    top: 2px;
+    left: 3px
+}
+.condition input{
+    height: 13px;
+    width: auto !important
+}
+.condition, .content-header, .ip-notice, .ip-error{
+    padding: 5px 0
+}
+#register .submit button{
+    width: 100%
 }

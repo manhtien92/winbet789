@@ -39,6 +39,9 @@ Route::group(['middleware' => ['web']], function () {
     // Get register view
     Route::get('register', 'Auth\AuthController@register');
 
+    // Create new user
+    Route::put('user', 'Auth\AuthController@create');
+
     // View my session
     Route::get('session/get', function() {
     	var_dump(Session::getId());

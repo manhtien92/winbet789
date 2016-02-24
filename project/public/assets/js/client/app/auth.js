@@ -25,7 +25,16 @@ var Auth = {
             data    : self.el.serialize(),
             success: function( data ){
                 if ( data['result'] ) {
-                    location.reload();
+                    //location.reload();
+                    var session = document.cookie;
+                    console.log(self.el.serialize());
+                    //var data = "{" +
+                    //    "msgtype : 'memberlg'," +
+                    //    " usr:'"+username_encode+"'," +
+                    //    "pwd:'"+password_encode+"', " +
+                    //    "sessId: '"+session_encode+"'}";
+                    //
+                    //socketio.emit("message", data);
                 } else {
                     alert('login fail');
                 }

@@ -25,14 +25,12 @@ Route::get('/admin', 'admin\HomeController@index');
 //    echo Hash::make('lamtanphiho1');
 //});
 Route::group(['middleware' => ['web']], function () {
-<<<<<<< HEAD
+
 	// Home page
 	Route::get('/', 'client\HomeController@index');
 
 	// User login
-=======
-    Route::get('/', 'client\HomeController@index');
->>>>>>> 9f75dd6019390217c061e3bdbd167bb04206f609
+
     Route::post('auth', 'Auth\AuthController@auth');
 
     // User logout

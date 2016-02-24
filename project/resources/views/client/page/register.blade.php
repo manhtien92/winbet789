@@ -13,11 +13,11 @@
 	<div class="container" id="register">
 		<div class="col-md-offset-1 col-md-10">
 			<div class="row header-register">
-				<div class="col-md-4 option-register">
-					<span class="active">MEMBER REGISTRATION</span>
+				<div class="col-md-6 option-register">
+					<span class="">MEMBER REGISTRATION</span>
 				</div>
-				<div class="col-md-4 option-register">
-					<span>FAST REGISTER</span>
+				<div class="col-md-6 option-register text-right">
+					<span class="active">FAST REGISTER</span>
 				</div>
 			</div>
 			<div class="row content-header">

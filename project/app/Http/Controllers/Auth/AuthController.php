@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use Auth;
+use Session;
 use App\User;
 use Validator;
 use Illuminate\Http\Request;
@@ -78,10 +79,18 @@ class AuthController extends Controller
     {
         if (Auth::attempt($request->only('email', 'password'), true))
         {
-            return response()->json(['result' => 'true'], 200);
+            $result = array(
+                'email'     => Auth::user()->email,
+                'password'  => Auth::user()->password,
+                'session'   => Session::getId()
+            );
+            return response()->json(array(
+                'result'    => TRUE,
+                'data'      =>$result
+            ));
         } else
         {
-            return response()->json(['result' => 'false'], 401);
+            return response()->json(['result' => FALSE], 401);
         }
     }
 

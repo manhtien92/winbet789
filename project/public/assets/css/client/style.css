@@ -26,6 +26,12 @@ a:hover{
 .right{
     float: right
 }
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
 .header .contact ul li{
     float: left;
     border-right: dashed 1px #498f9a;
@@ -82,7 +88,7 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="fil
 }
 .header .input-notice > span {
     background: #c9aa5f;
-    border: 1px solid #998147;
+    border: 1px solid #f6dad2;
     float: left;
     color: #fff;
     font-weight: bold;
@@ -164,6 +170,7 @@ sup.new{
 }
 .option-register{
     cursor: pointer;
+    font-weight: bold;
     height: 28px;
     line-height: 28px;
     font-size: 17px

@@ -25,7 +25,7 @@ var Auth = {
             data    : self.el.serialize(),
             success: function( data ){
                 if ( data['result'] ) {
-                    location.reload();
+                    //location.reload();
                 } else {
                     alert('login fail');
                 }

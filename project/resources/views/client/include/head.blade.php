@@ -2,8 +2,8 @@
 <meta name="description" content="">
 <meta name="author" content="Huquduy">
 
-<title>Chips</title>
-
+<title>hokibet188</title>
+<link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('assets/admin/imgs/logo.png')}}" />
 <!-- Import font -->
 <link rel="stylesheet" href="{{ URL::asset('assets/font/font-awesome-4.5.0/css/font-awesome.min.css') }}">
 

@@ -25,14 +25,7 @@ var Auth = {
             data    : self.el.serialize(),
             success: function( data ){
                 if ( data['result'] ) {
-
-                    var data1 = data['data'];
-                   data1['msgtype'] = 'memberlg';
-console.log(data1);
-                    socket.emit("memberMsg", data1);
-
-                } else {
-                    alert('login fail');
+                    location.reload();
                 }
             },
             statusCode: {

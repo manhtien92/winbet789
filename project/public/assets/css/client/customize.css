@@ -77,3 +77,6 @@ header li.active {
 a.dropdown-toggle:hover{
     
 }
+.ui-widget-header{
+    background: #d24a1f;
+}

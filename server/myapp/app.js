@@ -27,7 +27,7 @@ io.on('connection', function(client) {
         console.log(data);
     });
     client.on('memberMsg', function(data) {
-        console.log(data.msg);
+//console.log(data);
         switch (data.msgType)
         {
             case 'clientConnect':
@@ -38,6 +38,7 @@ io.on('connection', function(client) {
                 newMember.sessionid = '';
                 // Created list logged member
                 memberList.push(newMember);
+                console.log(data.msg);
             }
                 break;
             case 'memberlg':
@@ -48,7 +49,8 @@ io.on('connection', function(client) {
                     if(currUser.email == data.email && currUser.password == data.password){
                         //Check if duplicate login
                         if(currUser.session != data.session){
-                            var msgLoginDup = "{msgtype : 'duplicate_login'}";
+                            console.log(data);
+                            var msgLoginDup = "{msgType : 'duplicate_login'}";
                             var memCount = memberList.length - 1;
                             for(var j = memCount; j >= 0; j--){
                                 if(memberList[j].email == data.email){
@@ -59,6 +61,15 @@ io.on('connection', function(client) {
                             }
                             currUser.session = data.session;
                         }
+                        // neu khong thấy , tạo mới
+                        else{
+                            var newUser = new Object();
+                            newUser.email = data.email;
+                            newUser.password = data.email.password;
+                            newUser.session =  data.session;
+                            userList.push(newUser);
+
+                        }
                         var memCount = memberList.length - 1;
                         for(var j = memCount; j >= 0; j--){
                             if(memberList[j].socket == socket){
@@ -67,7 +78,7 @@ io.on('connection', function(client) {
                                 break;
                             }
                         }
-                        messResult = "{msgtype : 'login_result', result : true, username : '"+userList[i].id+"' , level : "+userList[i].level+"}";
+                        messResult = "{msgType : 'login_result', result : true, username : '"+userList[i].id+"' , level : "+userList[i].level+"}";
                         var data = _enData(messResult);
                         socket.emit("message", data);
                         return;

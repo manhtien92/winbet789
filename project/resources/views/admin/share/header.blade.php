@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>ag.hokibet188</title>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('assets/admin/imgs/logo.png')}}" />`
+    <link rel="shortcut icon" type="image/x-icon" href="{{ URL::asset('assets/admin/imgs/logo.png')}}" />
     <!-- Bootstrap Core CSS -->
     <link href="{{ URL::asset('assets/admin/bower_components/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
 

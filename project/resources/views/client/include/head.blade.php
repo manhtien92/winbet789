@@ -23,6 +23,7 @@
 <script src="assets/admin/js/socket.io.js"></script>
 <script src="assets/js//client/app/serverNodejs.js"></script>
 <script src="{{ URL::asset('assets/js/client/app/auth.js') }}"></script>
+<script src="{{ URL::asset('assets/js/client/app/dialog.js') }}"></script>
 <script type="text/javascript">
 	var baseUrl = "{{ URL::to('/') }}" + '/';
 	$(document).ready(function () {

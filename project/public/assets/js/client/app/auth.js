@@ -34,6 +34,15 @@ console.log(data1);
                 } else {
                     alert('login fail');
                 }
+            },
+            statusCode: {
+                403: function(xhr) { 
+                    var configDialog = {
+                        'title' : 'ERROR',
+                        'content' : 'Fail login, Please try again!',
+                    }
+                    Dialog.execDialog(configDialog);
+                },
             }
         });
     },

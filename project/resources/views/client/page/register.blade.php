@@ -87,8 +87,6 @@
 							<div class="col-md-6">
 								<select name="currency">
 									<option>IDR</option>
-									<option>CNY</option>
-									<option>MYR</option>
 								</select>
 								<div class="ip-error currency"></div>
 							</div>
@@ -108,6 +106,8 @@
 								<select name='bank_name'>
 									<option>BANK BCA</option>
 									<option>BANK BNI</option>
+									<option>BANK BRI</option>
+									<option>BANK MANDIRI</option>
 								</select>
 								<div class="ip-error bank_name"></div>
 							</div>
@@ -138,7 +138,7 @@
 				</div>
 				<div class="row content-header condition">
 					<div class="col-md-12">
-						<input type="checkbox" checked="true" />
+						<input id="over18" type="checkbox" />
 						*I am over 18 years of age and have read and accepted Terms & Conditions, Privacy Policy & Betting Rules as published on this site.
 					</div>
 				</div>

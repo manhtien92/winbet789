@@ -42,8 +42,13 @@ Route::group(['middleware' => ['web']], function () {
     // Create new user
     Route::put('user', 'Auth\AuthController@create');
 
+    Route::get('register/verify/{confirmationCode}', [
+        'as' => 'confirmation_path',
+        'uses' => 'Auth\AuthController@confirm'
+    ]);
+
     // View my session
     Route::get('session/get', function() {
-    	var_dump(Session::getId());
+    	var_dump(str_random(30));
     });
 });

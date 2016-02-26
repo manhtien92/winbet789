@@ -80,3 +80,6 @@ a.dropdown-toggle:hover{
 .ui-widget-header{
     background: #d24a1f;
 }
+.ui-button-icon-only .ui-button-text, .ui-button-icons-only .ui-button-text{
+    padding: 0
+}

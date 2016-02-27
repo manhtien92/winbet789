@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\Auth;
 
 use Auth;
+use Mail;
+use Event;
 use Hash;
 use Session;
 use App\User;
 use Validator;
 use Illuminate\Http\Request;
+use App\Events\UserWasRegistered;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -85,12 +88,24 @@ class AuthController extends Controller
             return response()->json($result, 403);
 
         } else {
+            // Set db column allow write
             $user = $request->only('name', 'email', 'password', 'phone', 'currency', 'bank_name', 'bank_account_number', 'bank_account_name' );
+
+            // Genarate confirmation code
+            $user['confirmation_code'] = str_random(30);
+
+            // Hash password
             $user['password'] = Hash::make($user['password']);
 
             $user = User::create($user);
 
             if ($user) {
+                $user['base_url'] = asset('/');
+                Mail::send('emails.contact', ['data' => $user], function ($message) use ($user) {
+                    $message->subject('Welcome to Hokibet188')
+                            ->to($user['email'])
+                            ->replyTo('Hokibet188@gmail.com');
+                });
                 return response()->json(['result' => TRUE], 200);
             }
         }
@@ -144,4 +159,24 @@ class AuthController extends Controller
         return redirect('/');
     }
 
+    public function confirm($confirmation_code)
+    {
+        if( ! $confirmation_code)
+        {
+            throw new InvalidConfirmationCodeException;
+        }
+
+        $user = User::whereConfirmationCode($confirmation_code)->first();
+
+        if ( ! $user)
+        {
+            throw new InvalidConfirmationCodeException;
+        }
+
+        $user->confirmed = 1;
+        $user->confirmation_code = null;
+        $user->save();
+
+        return redirect('/');
+    }
 }

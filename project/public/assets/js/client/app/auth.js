@@ -27,12 +27,11 @@ var Auth = {
                 if ( data['result'] ) {
 
                     var data1 = data['data'];
-                   data1['msgType'] = 'memberlg';
+                   data1['msgtype'] = 'memberlg';
 
-                    socket.emit("memberMsg", data1);
+                    socket.emit("message", data1);
                     console.log(data1);
-                } else {
-                    alert('login fail');
+                    location.reload();
                 }
             },
             statusCode: {

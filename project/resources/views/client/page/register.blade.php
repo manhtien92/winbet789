@@ -19,7 +19,7 @@
 						<span class="">MEMBER REGISTRATION</span>
 					</div>
 					<div class="col-md-6 option-register text-right">
-						<span class="active">FAST REGISTER</span>
+						<span class="btn">FAST REGISTER</span>
 					</div>
 				</div>
 				<div class="row content-header">
@@ -144,7 +144,7 @@
 				</div>
 				<div class="row content-header">
 					<div class="col-md-offset-9 col-md-3 submit">
-						<button type="submit">Submit</button>
+						<button class="btn" type="submit">Submit</button>
 					</div>
 				</div>
 			</div>

@@ -21,11 +21,15 @@
 <script src="{{ URL::asset('assets/third-party/jquery-ui-1.11.4/jquery-ui.min.js') }}"></script>
 <script src="{{ URL::asset('assets/third-party/bxslider/jquery.bxslider.min.js') }}"></script>
 <script src="assets/admin/js/socket.io.js"></script>
-<script src="assets/js//client/app/serverNodejs.js"></script>
+<script src="assets/js/client/app/serverNodejs.js"></script>
 <script src="{{ URL::asset('assets/js/client/app/auth.js') }}"></script>
 <script src="{{ URL::asset('assets/js/client/app/dialog.js') }}"></script>
 <script type="text/javascript">
 	var baseUrl = "{{ URL::to('/') }}" + '/';
+	var auth = {
+		email : "{{ isset( Auth::user()->email ) ? Auth::user()->email : null}}",
+		session : "{{ Session::getId() }}"
+	};
 	$(document).ready(function () {
 		Auth.init();
 	});

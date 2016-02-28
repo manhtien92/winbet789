@@ -2,7 +2,7 @@
  * Created by lamtanphiho on 2/21/2016.
  */
 try{
-    var socket = io.connect('http://localhost:1888');
+    var socket = io.connect('http://localhost:1888/admin_area');
     socket.on('connect', function(data) {
         socket.emit('agMsg', 'Hello World i am admin');
     });

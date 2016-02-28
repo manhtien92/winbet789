@@ -40,10 +40,14 @@ header li.active {
     border: 2px solid rgba(0, 0, 0, 0);;
 }
 .dropdown-menu>li>a img{
-    height: 120px
+    height: 75px;
+    margin-bottom: 15px;
+    margin-top: 10px
 }
 .navbar-nav>li>.dropdown-menu{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 2px solid #7f745f;
+    padding: 15px;
 }
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
     border: 2px solid #7f745f;
@@ -53,7 +57,7 @@ header li.active {
     border: none !important
 }
 #home_big_banner{
-    width: 
+    width: 100%
 }
 .right-slider{
     padding: 0
@@ -111,4 +115,15 @@ a.dropdown-toggle:hover{
 }
 .small-slider{
     display: none;
+}
+.bx-wrapper img {
+    width: 100%;
+    display: block;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    background-color: #c9aa5f;
+    color: #fff !important;
+}
+.btn:hover {
+    color: #DE2B2B !important;
 }

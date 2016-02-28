@@ -106,19 +106,13 @@
 		            	<ul class="dropdown-menu">
           					<li>
           						<a href="#">
-          							<img src="{{ URL::asset('assets/img/client/nav/hdr_submn_csports.gif') }}">
+          							<img src="{{ URL::asset('assets/img/client/nav/cmd368.png') }}">
           							<p>C-SPORTS</p>
           						</a>
           					</li>
           					<li>
           						<a href="#">
-          							<img src="{{ URL::asset('assets/img/client/nav/hdr_submn_lvcsn_ic.gif') }}">
-          							<p>I-SPORTS</p>
-          						</a>
-          					</li>
-          					<li>
-          						<a href="#">
-          							<img src="{{ URL::asset('assets/img/client/nav/hdr_submn_ssports.gif') }}">
+          							<img src="{{ URL::asset('assets/img/client/nav/menu-sbobet.png') }}">
           							<p>S-SPORTS</p>
           						</a>
           					</li>

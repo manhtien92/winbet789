@@ -38,7 +38,9 @@
 		</div>
 		<div class="row">
 			<div class="progressive-en progressive m-top-10">
-	            <div class="number" id="progressive_jackpot">285,621,980,181.18 IDR</div>
+				<div class="jackpot_gif">
+					<h4 class="number" id="progressive_jackpot">285,621,980,181.18 IDR</h4>
+				</div>
 	        </div>
 		</div>
 	</div>

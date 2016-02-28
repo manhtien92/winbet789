@@ -130,7 +130,13 @@ class AuthController extends Controller
      */
     public function auth(Request $request)
     {
-        if (Auth::attempt($request->only('email', 'password'), true))
+        $credentials = [
+            'email' => $request->get('email'),
+            'password' => $request->get('password'),
+            'confirmed' => 1
+        ];
+
+        if (Auth::attempt($credentials, true))
         {
             $result = array(
                 'email'     => Auth::user()->email,
@@ -167,6 +173,8 @@ class AuthController extends Controller
         }
 
         $user = User::whereConfirmationCode($confirmation_code)->first();
+
+        Auth::login($user);
 
         if ( ! $user)
         {

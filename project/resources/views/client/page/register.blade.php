@@ -29,10 +29,10 @@
 						</div>
 						<div class="row">
 							<div class="col-md-5">
-								Choose a Username<sup class="required">*</sup>
+								Fullname<sup class="required">*</sup>
 							</div>
 							<div class="col-md-6">
-								<input name='name' placeholder='Choose a username' />
+								<input name='name' placeholder='Enter your fullname' />
 								<div class="ip-error name"></div>
 							</div>
 						</div>

@@ -5,7 +5,7 @@
     font-style: normal;
 }
 body {
-    background-color: #d24a1f;
+    background: url(../../img/client/RedBackground-3.jpg) no-repeat 0% 50%;;
     background-position: center top;
     background-position: center top;
     background-repeat: repeat-x;
@@ -70,7 +70,7 @@ a:hover{
     float: left
 }
 input[type="text"], input[type="password"] {
-    background-color: rgb(23, 74, 92);
+    background-color: #585142;
     border: 1px solid rgb(86, 124, 137);
     color: rgb(210, 215, 221);
     height: 27px !important;
@@ -121,7 +121,6 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="fil
     padding: 15px 20px;
 }
 header .nav > li {
-    background: #db6e4b;
     background-position: right top;
     background-repeat: no-repeat;
 }
@@ -158,12 +157,18 @@ sup.new{
 .white{
     color: white
 }
+footer{
+    background: black;
+    border-top: 1px solid #7f745f;
+}
 #register{
-    background-color: #072b40;
-    border: 1px solid #a0a4ae;
+    background-color: #585142;
+    border: 1px solid #7f745f;
     padding: 30px 0;
     color: #fff;
-    border-radius: 2px
+    border-radius: 2px;
+    border-bottom: none;
+    margin-bottom: 20px
 }
 .header-register{
     background-color: rgba(0, 0, 0, 0.7);
@@ -179,8 +184,8 @@ sup.new{
 input, select{
     line-height: 27px;
     height: 27px;
-    background-color: #8d929d;
-    border: 1px solid #b3b6be;
+    background-color: #585142;
+    border: 1px solid rgb(86, 124, 137);
     padding: 0px 3px;
     border-radius: 2px
 }
@@ -201,7 +206,7 @@ input, select{
     padding: 7px 0
 }
 .option-register span.active{
-    background-color: #072b40;
+    background-color: #de3423;
     border-radius: 2px
 }
 .ip-notice{
@@ -224,4 +229,81 @@ input, select{
 }
 #register .submit button{
     width: 100%
+}
+#dialog{
+    display: none
+}
+footer .title{
+    text-transform: capitalize;
+    color: #d7c5a1;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: left;
+    line-height: 36px;
+    border-bottom: 1px solid #7f745f;
+    width: 90%;
+    padding-left: 20px;
+}
+footer .copyright >div{
+
+}
+footer .copyright .middle{
+    border: 1px solid #7f745f;
+    border-top: none;
+    border-bottom: none
+}
+footer img{
+    width: 100%
+}
+footer .middle .col-md-12 > div{
+    width: 50%;
+    padding: 10px 0
+}
+.footer_contact_2 {
+    background: #0e0e0e;
+    border: 1px solid #181818;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 10px;
+    padding: 5px 0px;
+}
+.footer_contact_detail_2 {
+    color: #d7c5a1;
+    font-weight: 700;
+    font-size: 12px;
+}
+.footer-contact img{
+    width: auto !important
+}
+.footer_contact {
+    background: #0e0e0e;
+    border: 1px solid #181818;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 10px;
+}
+.copyright-content {
+    border-top: 1px solid #181818;
+    background: #0e0e0e;
+}
+.copyright_txt {
+    color: #d7c5a1;
+    text-align: center;
+    line-height: 43px;
+}
+.jackpot_gif {
+    position: absolute;
+    bottom: 7px;
+    background: url(../../img/client/jackpot.gif)no-repeat;
+    width: 420px;
+    height: 125px;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+}
+#progressive_jackpot{
+    text-align: center;
+    padding: 30px;
+    font-size: 30px;
 }

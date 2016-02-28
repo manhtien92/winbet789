@@ -21,7 +21,7 @@ var Dialog = {
             width: 350,
             show: { effect: 'drop', direction: "up" },
             hide: { effect: 'drop', direction: "up" },
-            buttons: obj,
+            buttons: obj
         };
         Object.keys(obj).forEach(function(key) {
             if(key == "title"){

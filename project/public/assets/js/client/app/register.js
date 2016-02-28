@@ -27,7 +27,7 @@ var Register = {
                     if ( data['result'] ) {
                         var configDialog = {
                             'title' : 'SUCCESS',
-                            'content' : 'Register Success',
+                            'content' : 'Register successful, please check your email to activate your account!',
                         }
                         Dialog.execDialog(configDialog);
                     }

@@ -32,7 +32,7 @@ var Auth = {
                 403: function(xhr) { 
                     var configDialog = {
                         'title' : 'ERROR',
-                        'content' : 'Fail login, Please try again!',
+                        'content' : 'The email or password is incorrect, or this account has not been verified, Please try again!',
                     }
                     Dialog.execDialog(configDialog);
                 },

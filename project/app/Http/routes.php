@@ -29,6 +29,9 @@ Route::group(['middleware' => ['web']], function () {
 	// Home page
 	Route::get('/', 'client\HomeController@index');
 
+    // Home page
+    Route::get('home', 'client\HomeController@index');
+
 	// User login
 
     Route::post('auth', 'Auth\AuthController@auth');

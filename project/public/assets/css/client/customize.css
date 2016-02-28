@@ -2,7 +2,6 @@
 	background: #de3423;
     border: 1px solid #7f745f;
     font-weight: bold;
-    height: 32px;
     min-height: 31px;
     border-radius: 2px
 }
@@ -95,4 +94,21 @@ a.dropdown-toggle:hover{
 }
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
     background-color: #c9aa5f;
+}
+.navbar-toggle{
+    height: 30px;
+    margin: 0 15px
+}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+        background: #c9aa5f;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border:none;
+    background: black;
+}
+.small-slider{
+    display: none;
 }

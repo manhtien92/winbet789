@@ -21,11 +21,23 @@
 		width: 345px;
 		height: 166px
 	}
+	.navbar-default{
+		height: 32px;
+	}
+	.small-slider{
+		display: block;
+	}
 }
+@media (min-width: 1200px) {
 
+}
 
 @media (min-width: 768px) { 
 	.navbar-default .container-fluid, .navbar-default #myNavbar{
 		padding: 0
 	}
+	.navbar-default{
+		height: auto;
+	}
+
 }

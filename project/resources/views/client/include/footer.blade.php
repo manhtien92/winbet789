@@ -1,5 +1,5 @@
 <div class="copyright text-center container">
-	<div class="col-md-6">
+	<div class="col-md-6 col-sm-6">
 		<div class="row">
 			<h4 class="title">Powered By:</h4>
 			<div class="col-md-12">
@@ -8,7 +8,7 @@
 		</div>
 		
 	</div>
-	<div class="col-md-3 middle">
+	<div class="col-md-3 middle col-sm-3">
 		<div class="row">
 			<h4 class="title">Banking</h4>
 			<div class="col-md-12">
@@ -24,6 +24,12 @@
 				<div class="left">
 					<img src="{{ URL::asset('assets/img/client/bank_4.jpg') }}">
 				</div>
+				<div class="left">
+					<img src="{{ URL::asset('assets/img/client/bank_5.jpg') }}">
+				</div>
+				<div class="left">
+					
+				</div>
 			</div>
 			<h4 class="title">Media Sosial:</h4>
 			<div class="col-md-12 sosial">
@@ -36,7 +42,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-3 footer-contact">
+	<div class="col-md-3 footer-contact col-sm-3">
 		<h3 class="title">Contact us:</h3>
 		<div class="footer_contact_2">
 			<div class=""><img src="{{ URL::asset('assets/img/client/footer_yahoo.png') }}"></div>
@@ -44,7 +50,7 @@
 		</div>
 		<div class="footer_contact">
 			<div class=""><img src="{{ URL::asset('assets/img/client/footer_whatsapp.png') }}"></div>
-			<div class="footer_contact_detail_2">call Untung</div>
+			<div class="footer_contact_detail_2">call Hokibet</div>
 		</div>
 		<div class="footer_contact clearfix">
 			<div class=""><img src="{{ URL::asset('assets/img/client/footer_bbm.png') }}"></div>

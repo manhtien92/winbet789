@@ -25,7 +25,6 @@
 header li.active {
     background-image: url(../../img/client/hdr_mn_on.gif);
     background-repeat: repeat-x;
-    height: 31px;
     min-height: 31px;
 }
 .navbar-default .navbar-nav>.active>a{
@@ -63,10 +62,11 @@ header li.active {
     padding: 0
 }
 .progressive-en {
-    background-image: url('../../img/client/bg_jackpot.jpg');
+    background-image: url('../../img/client/banner progresive jackpot-sample.jpg');
     float: left;
-    background-size: 100%;
-    height: 140px;
+    background-size: 100% 100%;
+    height: 248px;
+    border: 1px solid #7f745f;
     width: 100%;
     position: relative;
     margin: 10px 0;

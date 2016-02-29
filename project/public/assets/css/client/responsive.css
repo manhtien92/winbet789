@@ -43,11 +43,17 @@
 }
 @media (max-width: 460px) { 
 	.jackpot_gif{
-		background-size: 100%;
 		position: initial;
-		width: 100%
+    	width: 100%;
 	}
 	#progressive_jackpot{
 		font-size: 20px
 	}
+	#progressive_jackpot {
+	    padding: 25px;
+	}
+	.progressive-en {
+    background-image: none;
+    height: auto
+}
 }

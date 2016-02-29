@@ -157,7 +157,7 @@
                     </li>
                     <li class="dropdown ">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        E-GAMES <sup class="new">NEW</sup>
+                        SLOT GAMES <sup class="new">NEW</sup>
                         </a>
                         <ul class="dropdown-menu">
                             <li>

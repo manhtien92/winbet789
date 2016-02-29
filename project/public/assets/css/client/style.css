@@ -5,7 +5,7 @@
     font-style: normal;
 }
 body {
-    background: url(../../img/client/RedBackground-3.jpg) no-repeat 0% 50%;;
+    background: url(../../img/client/bg.png) no-repeat 0% 50%;;
     background-position: center top;
     background-position: center top;
     background-repeat: repeat-x;
@@ -257,7 +257,8 @@ footer img{
 }
 footer .middle .col-md-12 > div{
     width: 50%;
-    padding: 10px 0
+    padding: 10px 0;
+    height: 49px;
 }
 .footer_contact_2 {
     background: #0e0e0e;
@@ -293,10 +294,11 @@ footer .middle .col-md-12 > div{
 }
 .jackpot_gif {
     position: absolute;
-    bottom: 7px;
+    bottom: 47px;
     background: url(../../img/client/jackpot.gif)no-repeat;
     width: 420px;
-    height: 125px;
+    background-size: 100% 100%;
+    height: 85px;
     margin-right: auto;
     margin-left: auto;
     left: 0;
@@ -304,7 +306,7 @@ footer .middle .col-md-12 > div{
 }
 #progressive_jackpot{
     text-align: center;
-    padding: 30px;
+    padding: 13px;
     font-size: 30px;
 }
 .btn{
@@ -313,4 +315,7 @@ footer .middle .col-md-12 > div{
     cursor: pointer;
     font-weight: bold;
     padding: 3px 20px;
+}
+.sosial >div{
+    height: auto !important
 }

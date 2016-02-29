@@ -133,7 +133,8 @@ class AuthController extends Controller
         $credentials = [
             'email' => $request->get('email'),
             'password' => $request->get('password'),
-            'confirmed' => 1
+            // Disable confirm code
+            //'confirmed' => 1
         ];
 
         if (Auth::attempt($credentials, true))

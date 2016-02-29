@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'hokibet188@gmail.com', 'name' => 'Untung'],
+    'from' => ['address' => 'hokibet188@gmail.com', 'name' => 'Hokibet188'],
 
     /*
     |--------------------------------------------------------------------------

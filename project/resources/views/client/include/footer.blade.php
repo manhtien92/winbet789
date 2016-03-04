@@ -1,5 +1,5 @@
 <div class="copyright text-center container">
-	<div class="col-md-6">
+	<div class="col-md-6 col-sm-6">
 		<div class="row">
 			<h4 class="title">Powered By:</h4>
 			<div class="col-md-12">
@@ -8,7 +8,7 @@
 		</div>
 		
 	</div>
-	<div class="col-md-3 middle">
+	<div class="col-md-3 middle col-sm-3">
 		<div class="row">
 			<h4 class="title">Banking</h4>
 			<div class="col-md-12">
@@ -22,7 +22,13 @@
 					<img src="{{ URL::asset('assets/img/client/bank_3.jpg') }}">
 				</div>
 				<div class="left">
+					<img src="{{ URL::asset('assets/img/client/bank_5.jpg') }}">
+				</div>
+				<div class="left">
 					<img src="{{ URL::asset('assets/img/client/bank_4.jpg') }}">
+				</div>
+				<div class="left">
+					
 				</div>
 			</div>
 			<h4 class="title">Media Sosial:</h4>
@@ -36,7 +42,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="col-md-3 footer-contact">
+	<div class="col-md-3 footer-contact col-sm-3">
 		<h3 class="title">Contact us:</h3>
 		<div class="footer_contact_2">
 			<div class=""><img src="{{ URL::asset('assets/img/client/footer_yahoo.png') }}"></div>
@@ -44,7 +50,7 @@
 		</div>
 		<div class="footer_contact">
 			<div class=""><img src="{{ URL::asset('assets/img/client/footer_whatsapp.png') }}"></div>
-			<div class="footer_contact_detail_2">call Untung</div>
+			<div class="footer_contact_detail_2">call Hokibet</div>
 		</div>
 		<div class="footer_contact clearfix">
 			<div class=""><img src="{{ URL::asset('assets/img/client/footer_bbm.png') }}"></div>
@@ -60,3 +66,33 @@
 <div id="dialog" title="Notice">
   	<p class="dialog-content">Register Success</p>
 </div>
+
+<!-- Import Javascript -->
+<script src="{{ URL::asset('assets/third-party/jquery/jquery-2.1.4.min.js') }}"></script>
+<script src="{{ URL::asset('assets/third-party/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ URL::asset('assets/third-party/jquery-ui-1.11.4/jquery-ui.min.js') }}"></script>
+<script src="{{ URL::asset('assets/third-party/bxslider/jquery.bxslider.min.js') }}"></script>
+<script src="{{ URL::asset('assets/admin/js/socket.io.js') }}"></script>
+<script src="{{ URL::asset('assets/js/client/app/serverNodejs.js') }}"></script>
+
+<!-- Application Dependencies -->
+<script src="assets/js/node_modules/angular/angular.js"></script>
+<script src="assets/js/node_modules/angular-ui-router/build/angular-ui-router.js"></script>
+<script src="assets/js/node_modules/satellizer/satellizer.js"></script>
+
+<!-- Application Scripts -->
+<script src="assets/js/client/app/app.js"></script>
+
+<!-- Application Controller -->
+<script src="assets/js/client/app/controller/authController.js"></script>
+
+<!-- Application Directive -->
+<script src="assets/js/client/app/directive/hokibetSlide.js"></script>
+
+<script type="text/javascript">
+	var auth = {
+		email : "{{ isset( Auth::user()->email ) ? Auth::user()->email : null}}",
+		session : "{{ Session::getId() }}"
+	};
+</script>
+	

@@ -5,7 +5,7 @@
     font-style: normal;
 }
 body {
-    background: url(../../img/client/RedBackground-3.jpg) no-repeat 0% 50%;;
+    background: url(../../img/client/bg.png) no-repeat 0% 50%;;
     background-position: center top;
     background-position: center top;
     background-repeat: repeat-x;
@@ -112,7 +112,7 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="fil
     width: 80%;
 }
 .light, a.light, a.light:link, .light a, .light a:link {
-    color: #40fdfd;
+    color: rgb(210, 215, 221)
 }
 .ico-mobile {
     background-image: url(../../img/client/hdr_mn_icon_mobile_of.png) !important;
@@ -257,7 +257,8 @@ footer img{
 }
 footer .middle .col-md-12 > div{
     width: 50%;
-    padding: 10px 0
+    padding: 10px 0;
+    height: 49px;
 }
 .footer_contact_2 {
     background: #0e0e0e;
@@ -293,10 +294,11 @@ footer .middle .col-md-12 > div{
 }
 .jackpot_gif {
     position: absolute;
-    bottom: 7px;
+    bottom: 27px;
     background: url(../../img/client/jackpot.gif)no-repeat;
     width: 420px;
-    height: 125px;
+    background-size: 100% 100%;
+    height: 85px;
     margin-right: auto;
     margin-left: auto;
     left: 0;
@@ -304,7 +306,7 @@ footer .middle .col-md-12 > div{
 }
 #progressive_jackpot{
     text-align: center;
-    padding: 30px;
+    padding: 13px;
     font-size: 30px;
 }
 .btn{
@@ -313,4 +315,69 @@ footer .middle .col-md-12 > div{
     cursor: pointer;
     font-weight: bold;
     padding: 3px 20px;
+}
+.none-pad{
+    padding: 0
+}
+.sosial >div{
+    height: auto !important
+}
+.small-slide>div:last-child{
+    margin-top: 20px
+}
+.promoSlide img{
+    width: 100%
+}
+.relative{
+    position: relative;
+}
+.promoSlide{
+    width: auto;
+    padding: 0
+}
+.small-slider>div:first-child{
+    position: absolute;
+    top:0;
+}
+.small-slider>div:last-child{
+    position: absolute;
+    bottom:0;
+}
+.mainSlide {
+    padding: 0;
+    margin: 0
+}
+.mid-sport{
+    background: url(../../img/client/middle/home_btn_sport.png)no-repeat;
+}
+.mid-casino{
+    background: url(../../img/client/middle/home_btn_casino.png)no-repeat;
+}
+.mid-slot{
+    background: url(../../img/client/middle/home_btn_egames.png)no-repeat;
+}
+.mid-lottery{
+    background: url(../../img/client/middle/home_btn_lottery.png)no-repeat;
+}
+.mid-poker{
+    background: url(../../img/client/middle/home_btn_poker.png)no-repeat;
+}
+.mid-promo{
+    background: url(../../img/client/middle/home_btn_promo.png)no-repeat;
+}
+.middle > div{
+    height: 186px;
+    position: relative;
+}
+.middle > div > a{
+    text-align: center;
+    color: white
+}
+.middle > div p{
+    max-width: 131px;
+    padding: 143px 0 10px 0;
+    font-weight: bold
+}
+.info-user{
+    padding-bottom: 10px
 }

@@ -10,7 +10,7 @@
                 restrict: 'AE',
                 replace: true,
                 templateUrl: baseUrl + 'assets/view/directive/hokibetSlide.html',
-                link: function(scope, elm, attrs) {console.log($(elm[0]).attr('class'));
+                link: function(scope, elm, attrs) {
                     $timeout(function () {
                         $("ul.mainSlide").bxSlider({
                             mode:'horizontal',

@@ -1,7 +1,7 @@
 <div class="container">
-    <div class="row header">
+    <div class="row header" ng-controller="AuthController">
         <div class="col-md-3">
-            <a href="home">
+            <a href="#home">
                 <h1 style="color:#fff;font-size:30px">HOKIBET188</h1>
             </a>
         </div>
@@ -27,29 +27,28 @@
                     </li>
                 </ul>
             </div>
-            <div class="row">
-                @if ( !$auth )
-                <form id="login-form" class="right">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <input placeholder="USERNAME" type="text" name="email" maxlength="30" required="true" value="">
-                    <input placeholder="PASSWORD" name="password" type="password" maxlength="256" required="true" value="">
-                    <input type="submit" id="btn-login" value="Log In" class="log-btn">
+            <div class="row info-user">
+
+                <form ng-show="!currentUser" id="login-form" class="right">
+                    <input placeholder="USERNAME"  ng-model="username" type="text" maxlength="30" required >
+                    <input placeholder="PASSWORD" ng-model="password" type="password" maxlength="256" required>
+                    <input type="submit" id="btn-login" ng-click="login()" value="Log In" class="log-btn">
                     <img src="{{ URL::asset('assets/img/client/hdr_icon_lock.png') }}" width="16" height="16" border="0">
                 </form>
-                @else
-                <div class="col-md-offset-3 col-md-4">
-                    <p class="right">Hi, {!! $auth['name'] !!}</p>
+                <div ng-if="currentUser">
+                    <div class="col-md-offset-3 col-md-4 col-sm-offset-3 col-sm-4">
+                        <p ng-cloak class="right"><%'Hi ,' + currentUser.username%></p>
+                    </div>
+                    <div class="col-md-3 col-sm-3">
+                        <p class="left">
+                            <span ng-cloak id="main-balance"><%currentUser.main_balance%></span>
+                            <span ng-cloak id="currency"><%currentUser.currency%></span>
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-sm-2">
+                        <a ng-click="logout()" class="btn white right" href="">logout</a>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <p class="left">
-                        <span id="main-balance">{!! $auth['main_balance'] !!}</span>
-                        <span id="currency">{!! $auth['currency'] !!}</span>
-                    </p>
-                </div>
-                <div class="right">
-                    <a class="btn white" href="{{ URL::to('/logout') }}">logout</a>
-                </div>
-                @endif
             </div>
             <div class="row">
                 <div class="input-notice col-md-6">
@@ -59,10 +58,8 @@
                     </em>
                 </div>
                 <div class="col-md-6">
-                    @if ( !$auth )
-                    <a class="light right" href="ForgetPassword">Forget login details?</a>
-                    @else
-                    <div class="row">
+                    <a ng-if="!currentUser" class="light right" href="ForgetPassword">Forget login details?</a>
+                    <div class="row" ng-if="currentUser">
                         <ul class="method right">
                             <li>
                                 <a href="#">Deposit</a>
@@ -81,7 +78,6 @@
                             </li>
                         </ul>
                     </div>
-                    @endif
                 </div>
             </div>
         </div>
@@ -98,7 +94,7 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a class="ico-home" href="home">
+                        <a class="ico-home" href="#home">
                         </a>
                     </li>
                     <li class="dropdown ">
@@ -260,8 +256,8 @@
                         REFERRAL
                         </a>
                     </li>
-                    <li class="dropdown alert-main">
-                        <a href="{{ URL::to('register') }}">
+                    <li ng-if="!currentUser" class="dropdown alert-main">
+                        <a href="#register">
                         JOIN NOW
                         </a>
                     </li>

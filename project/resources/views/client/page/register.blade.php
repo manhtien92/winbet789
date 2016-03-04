@@ -38,6 +38,15 @@
 						</div>
 						<div class="row">
 							<div class="col-md-5">
+								Username<sup class="required">*</sup>
+							</div>
+							<div class="col-md-6">
+								<input name='username' placeholder='Enter your username' />
+								<div class="ip-error username"></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-5">
 								Email Address<sup class="required">*</sup>
 							</div>
 							<div class="col-md-6">

@@ -22,10 +22,10 @@
 					<img src="{{ URL::asset('assets/img/client/bank_3.jpg') }}">
 				</div>
 				<div class="left">
-					<img src="{{ URL::asset('assets/img/client/bank_4.jpg') }}">
+					<img src="{{ URL::asset('assets/img/client/bank_5.jpg') }}">
 				</div>
 				<div class="left">
-					<img src="{{ URL::asset('assets/img/client/bank_5.jpg') }}">
+					<img src="{{ URL::asset('assets/img/client/bank_4.jpg') }}">
 				</div>
 				<div class="left">
 					
@@ -66,3 +66,33 @@
 <div id="dialog" title="Notice">
   	<p class="dialog-content">Register Success</p>
 </div>
+
+<!-- Import Javascript -->
+<script src="{{ URL::asset('assets/third-party/jquery/jquery-2.1.4.min.js') }}"></script>
+<script src="{{ URL::asset('assets/third-party/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ URL::asset('assets/third-party/jquery-ui-1.11.4/jquery-ui.min.js') }}"></script>
+<script src="{{ URL::asset('assets/third-party/bxslider/jquery.bxslider.min.js') }}"></script>
+<script src="{{ URL::asset('assets/admin/js/socket.io.js') }}"></script>
+<script src="{{ URL::asset('assets/js/client/app/serverNodejs.js') }}"></script>
+
+<!-- Application Dependencies -->
+<script src="assets/js/node_modules/angular/angular.js"></script>
+<script src="assets/js/node_modules/angular-ui-router/build/angular-ui-router.js"></script>
+<script src="assets/js/node_modules/satellizer/satellizer.js"></script>
+
+<!-- Application Scripts -->
+<script src="assets/js/client/app/app.js"></script>
+
+<!-- Application Controller -->
+<script src="assets/js/client/app/controller/authController.js"></script>
+
+<!-- Application Directive -->
+<script src="assets/js/client/app/directive/hokibetSlide.js"></script>
+
+<script type="text/javascript">
+	var auth = {
+		email : "{{ isset( Auth::user()->email ) ? Auth::user()->email : null}}",
+		session : "{{ Session::getId() }}"
+	};
+</script>
+	

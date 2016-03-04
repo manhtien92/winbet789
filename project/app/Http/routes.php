@@ -26,32 +26,27 @@ Route::get('/admin', 'admin\HomeController@index');
 //});
 Route::group(['middleware' => ['web']], function () {
 
+    Route::group(['prefix' => 'api'], function()
+    {
+        // User authenticate
+        Route::post('authenticate', 'Auth\AuthController@authenticate');
+
+        // Get current user
+        Route::get('authenticate/user', 'Auth\AuthController@getAuthenticatedUser');
+
+        // Create new user
+        Route::put('user', 'Auth\AuthController@create');
+    });
+    
 	// Home page
 	Route::get('/', 'client\HomeController@index');
-
-    // Home page
-    Route::get('home', 'client\HomeController@index');
-
-	// User login
-
-    Route::post('auth', 'Auth\AuthController@auth');
-
-    // User logout
-    Route::get('logout', 'Auth\AuthController@logout');
 
     // Get register view
     Route::get('register', 'Auth\AuthController@register');
 
-    // Create new user
-    Route::put('user', 'Auth\AuthController@create');
-
+    // Cofirm code
     Route::get('register/verify/{confirmationCode}', [
         'as' => 'confirmation_path',
         'uses' => 'Auth\AuthController@confirm'
     ]);
-
-    // View my session
-    Route::get('session/get', function() {
-    	var_dump(str_random(30));
-    });
 });

@@ -35,19 +35,6 @@
                     <input type="submit" id="btn-login" ng-click="login()" value="Log In" class="log-btn">
                     <img src="{{ URL::asset('assets/img/client/hdr_icon_lock.png') }}" width="16" height="16" border="0">
                 </form>
-
-                <div class="col-md-offset-3 col-md-4">
-                    <p class="right">Hi, {!! $auth['name'] !!}</p>
-                </div>
-                <div class="col-md-3">
-                    <p class="left">
-                        <span id="main-balance">{!! $auth['main_balance'] !!}</span>
-                        <span id="currency">{!! $auth['currency'] !!}</span>
-                    </p>
-                </div>
-                <div class="right">
-                    <a id="logout" class="btn white" href="{{ URL::to('/logout') }}">logout</a>
-
                 <div ng-if="currentUser">
                     <div class="col-md-offset-3 col-md-4 col-sm-offset-3 col-sm-4">
                         <p ng-cloak class="right"><%'Hi ,' + currentUser.username%></p>
@@ -61,7 +48,6 @@
                     <div class="col-md-2 col-sm-2">
                         <a ng-click="logout()" class="btn white right" href="">logout</a>
                     </div>
-
                 </div>
             </div>
             <div class="row">

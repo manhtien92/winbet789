@@ -25,10 +25,7 @@ var Auth = {
             data    : self.el.serialize(),
             success: function( data ){
                 if ( data['result'] ) {
-
-                    var data1 = data['data'];
-                   data1['msgtype'] = 'memberlg';
-
+                    var data1 = {msgtype:'memberlg', email:auth.email, session: auth.session}
                     socket.emit("message", data1);
                     console.log(data1);
                     location.reload();

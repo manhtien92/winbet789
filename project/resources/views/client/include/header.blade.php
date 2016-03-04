@@ -47,7 +47,7 @@
                     </p>
                 </div>
                 <div class="right">
-                    <a class="btn white" href="{{ URL::to('/logout') }}">logout</a>
+                    <a id="logout" class="btn white" href="{{ URL::to('/logout') }}">logout</a>
                 </div>
                 @endif
             </div>

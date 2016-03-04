@@ -408,154 +408,111 @@ io.of('/admin_area').on('connection', function(socket) {
  -----------------------------------------
  */
 io.of('/member_area').on('connection', function(socket) {
-    var dataReceive;
     var newMember = new Object();
     newMember.socket = socket;
-    newMember.userid = '';
+    newMember.email = '';
     newMember.sessionid = '';
+
     // Created list logged member
     memberList.push(newMember);
     socket.on('message', function(data){
         var jsonObject = data;
-        var mSize = memberList.length - 1;
-
-
-        switch(jsonObject['msgtype']){
+        switch(jsonObject['msgtype']) {
             case 'check_logged':
-                var email 		= jsonObject['email'];
-                var sessionid =jsonObject['session'];
+                console.log('hello', data.email, data.session);
+                var email = jsonObject['email'];
+                var sessionid = jsonObject['session'];
                 var mSize = userList.length - 1;
-                for(var i = mSize; i >= 0; i--){
+                for (var i = mSize; i >= 0; i--) {
                     var currUser = userList[i];
                     // If find session in nodejs, set connection for client
-                    if(currUser.email == email && currUser.sessionid == sessionid){
+                    console.log(currUser.email, currUser.sessionid);
+                    if (currUser.email == email && currUser.sessionid == sessionid) {
                         var memCount = memberList.length - 1;
-                        for(var j = memCount; j >= 0; j--){
-                            if(memberList[j].socket == socket){
+                        for (var j = memCount; j >= 0; j--) {
+                            if (memberList[j].socket == socket) {
                                 // Set connection for client
                                 memberList[j].email = email;
                                 memberList[j].sessionid = sessionid;
-                                messResult = "{msgtype : 'logged_result', result : true, email : '"+userList[i].email+"}";
+                                messResult = {msgtype: 'logged_result', result: true, email: userList[i].email};
                                 // Emit message to client
-                                socket.emit("message", data);
+                                socket.emit("message", messResult);
                                 return;
                             }
                         }
                     }
                 }
-                messResult = "{msgtype : 'logged_result', result : false, email : ''}";
-                var data = messResult;
-                socket.emit("message", data);
+                messResult = {msgtype: 'logged_result', result: false, 'email': ''};
+                socket.emit("message", messResult);
                 break;
             // Login event
             case 'memberlg':
-                console.log('login');
-                //var messResult;
-                //var mSize = userList.length - 1;
-                //var userid 		= Decode(jsonObject['usr'], cyptKey);
-                //var pass 		= Decode(jsonObject['pwd'], cyptKey);
-                //var userFound = false;
-                //for(var i = mSize; i >= 0; i--){
-                //    var currUser = userList[i];
-                //    if(currUser.id == userid && currUser.password == pass){console.log(currUser.sessionid + "+++++" + sessionid);
-                //        //Check if duplicate login
-                //        if(currUser.sessionid != sessionid){console.log(currUser.sessionid + "----" + sessionid);
-                //            var msgLoginDup = "{msgtype : 'duplicate_login'}";
-                //            msgLoginDup = _enData(msgLoginDup);
-                //            var memCount = memberList.length - 1;
-                //            for(var j = memCount; j >= 0; j--){
-                //                if(memberList[j].userid == userid){
-                //                    memberList[j].userid = '';
-                //                    memberList[j].sessionid = '';
-                //                    memberList[j].socket.emit('message', msgLoginDup);
-                //                }
-                //            }
-                //            currUser.sessionid = sessionid;
-                //        }
-                //        var memCount = memberList.length - 1;
-                //        for(var j = memCount; j >= 0; j--){
-                //            if(memberList[j].socket == socket){
-                //                memberList[j].userid = userid;
-                //                memberList[j].sessionid = sessionid;
-                //                break;
-                //            }
-                //        }
-                //        messResult = "{msgtype : 'login_result', result : true, username : '"+userList[i].id+"' , level : "+userList[i].level+"}";
-                //        var data = _enData(messResult);
-                //        socket.emit("message", data);
-                //        userFound = true;
-                //        return;
-                //    }
-                //}
-                //// If not found in userlist, update connection to userlist and memberlist
-                //if(userFound) break;
-                //dbcnn = mysql.createConnection({host: '127.0.0.1', user: 'root', password: '', database: 'lobby'});
-                //var qString = "SELECT userid, password, session_id, level, email FROM users WHERE `userid` = '"+userid+"' AND `password` = '"+pass+"'";
-                //var query = dbcnn.query(qString, function (err, results, fields) {
-                //    if(err) {console.log('Check existing user fail, Can not connect to database lobby!'); dbcnn.end(); return;}
-                //    if(results.length > 0 ){
-                //        // Update connection to memberlist
-                //        var memCount = memberList.length - 1;
-                //        for(var j = memCount; j >= 0; j--){
-                //            if(memberList[j].socket == socket){
-                //                memberList[j].userid = results[0]['userid'];
-                //                memberList[j].sessionid = sessionid;
-                //                break;
-                //            }
-                //        }
-                //        // Update to userlist
-                //        var user = new Object();
-                //        user.id = results[0]['userid'];
-                //        user.password = results[0]['password'];
-                //        user.sessionid = sessionid;
-                //        userList.push(user);
-                //        messResult = "{msgtype : 'login_result', result : true, username : '"+results[0]['userid']+"' , level : "+results[0]['level']+"}";
-                //        var data = _enData(messResult);
-                //        socket.emit("message", data);
-                //    }else{
-                //        messResult = "{msgtype : 'login_result', result : false, username : ''}";
-                //        var data = _enData(messResult);
-                //        socket.emit("message", data);
-                //    }
-                //    dbcnn.end();
-                //});
-                break;
-            // Logout event
-            case 'memberlgout':
-                var sessionid 	= Decode(jsonObject['sessId'], cyptKey);
-                var userid		= Decode(jsonObject['usr'], cyptKey);
-                var iSize = userList.length - 1;
-                for(var i = iSize; i >= 0; i--){
+                //console.log('login');
+                var messResult;
+                var mSize = userList.length - 1;
+                var email = jsonObject.email;
+                var userFound = false;
+                for (var i = mSize; i >= 0; i--) {
                     var currUser = userList[i];
-                    if(currUser.id == userid && currUser.sessionid == sessionid){
-                        var msgLogout = "{msgtype : 'logout'}";
-                        msgLogout = CryptoJS.AES.encrypt(msgLogout, key);
-                        msgLogout = msgLogout.toString(CryptoJS.Utf8);
-                        msgLogout = LZString.compressToUTF16(msgLogout);
+                    if (email != '') {
+                        //Check if duplicate login
+                        if (currUser.sessionid != jsonObject.session) {
+                            var msgLoginDup = "{msgtype : 'duplicate_login'}";
+                            var memCount = memberList.length - 1;
+                            for (var j = memCount; j >= 0; j--) {
+                                if (memberList[j].email == email) {
+                                    //memberList[j].email = '';
+                                    //memberList[j].sessionid = '';
+                                    memberList[j].socket.emit('message', msgLoginDup);
+                                }
+                            }
+                            currUser.sessionid = sessionid;
+
+                        }
                         var memCount = memberList.length - 1;
-                        for(var j = memCount; j >= 0; j--){
-                            if(memberList[j].userid == userid){
-                                memberList[j].socket.emit('message', msgLogout);
-                                memberList[j].userid = '';
-                                memberList[j].sessionid = '';
+                        for (var j = memCount; j >= 0; j--) {
+                            if (memberList[j].socket == socket) {
+                                memberList[j].email = email;
+                                memberList[j].sessionid = jsonObject.session;
+                                break;
                             }
                         }
-                        var msg = "{msgtype : 'memberLogout', userid : '"+userid+"'}";
-                        msg = CryptoJS.AES.encrypt(msg, key);
-                        msg = msg.toString(CryptoJS.Utf8);
-                        //send msg logout to gamesite
-                        var gameCount = gamesiteList.length - 1;
-                        for(var j = gameCount; j >= 0; j--)
-                            gamesiteList[j].socket.write(msg);
-                        currUser.sessionid = '';
+                        messResult = {
+                            msgtype: 'login_result',
+                            result: true,
+                            email: email
+                        };
+
+                        socket.emit("message", messResult);
+                        userFound = true;
+                        return;
+                    }
+                }
+                // If not found in userlist, update connection to userlist and memberlist
+                if (userFound) break;
+
+                var memCount = memberList.length - 1;
+                for (var j = memCount; j >= 0; j--) {
+                    if (memberList[j].socket == socket) {
+                        memberList[j].email = jsonObject.email;
+                        memberList[j].sessionid = jsonObject.session;
                         break;
                     }
                 }
+                // Update to userlist
+                var user = new Object();
+                user.email = jsonObject.email;
+                user.sessionid = jsonObject.session;
+                userList.push(user);
+                console.log('uer', userList);
+                messResult = {
+                    msgtype : 'login_result',
+                    result : true,
+                    email : email
+                };
+                socket.emit("message", messResult);
                 break;
-            // Transaction
-
-            default:
-                break;
+            // Logout event
         }
     });
 

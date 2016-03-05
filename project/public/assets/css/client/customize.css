@@ -132,17 +132,38 @@ a.dropdown-toggle:hover{
     margin: 0 !important
 }
 .ngdialog.ngdialog-theme-flat .ngdialog-close:before{
-    background: #d24a1f;
-    border-bottom-left-radius: 2px;
     width: 1.50em;
     height: 1.50em;
-    line-height: 0.50em
+    line-height: 0.50em;
+    color: #EC4510;
+    background: none;
+    font-size: 20px;
 }
 .ngdialog.ngdialog-theme-flat .ngdialog-content{
-    border: 5px solid #d24a1f;
-    border-radius: 2px
+    border: 2px solid #d24a1f;
+    border-radius: 2px;
+    width: 450px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    max-height: 200px;
+    top: 0;
+    bottom: 0;
+    background: rgb(245, 242, 242);
+    padding-top: 0
 }
 .ngdialog.ngdialog-theme-flat .ngdialog-overlay{
     background: #666666 url("../../img/client/ui-bg.png") 50% 50% repeat;
     opacity: .5;
+}
+.ngdialog-content h3.title{
+    color: #EC4510;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    font-family: Tahoma, Geneva, sans-serif, 微软雅黑;
+    margin-top: 0;
+    width: 100%;
+    border-bottom: 1px solid #EC4510;
 }

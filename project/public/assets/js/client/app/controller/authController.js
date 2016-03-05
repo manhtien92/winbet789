@@ -8,8 +8,6 @@
 
 
     function AuthController($auth, $state, $http, $rootScope, $scope, ngDialog) {
-        $scope.loginError = false;
-        $scope.loginErrorText;
 
         $scope.login = function() {
 
@@ -26,7 +24,15 @@
 
             // Handle errors
             }, function(error) {
-                ngDialog.open({ template: 'assets/view/dialog/popupTmpl.html', className: 'ngdialog-theme-flat ngdialog-theme-custom'  });
+
+                $scope.error = error.data.error;
+                ngDialog.open({ 
+
+                    // Config dialog
+                    template: 'assets/view/dialog/popupTmpl.html', 
+                    className: 'ngdialog-theme-flat ngdialog-theme-custom',
+                    scope: $scope
+                });
 
             // Because we returned the $http.get request in the $auth.login
             // promise, we can chain the next promise to the end here

@@ -99,6 +99,9 @@ input[type="button"], input[type="submit"], input[type="reset"], input[type="fil
 .header{
     padding-bottom: 10px
 }
+.center{
+    text-align: center;
+}
 .header .input-notice > em {
     background: #4c4023;
     float: left;
@@ -373,6 +376,7 @@ footer .middle .col-md-12 > div{
 .middle > div{
     height: 186px;
     position: relative;
+    background-size: 100%;
 }
 .middle > div > a{
     text-align: center;
@@ -380,8 +384,8 @@ footer .middle .col-md-12 > div{
 }
 .middle > div p{
     max-width: 131px;
-    padding: 143px 0 10px 0;
-    font-weight: bold
+    padding: 133px 0 15px 10px;
+    font-weight: bold;
 }
 .info-user{
     padding-bottom: 10px
@@ -456,4 +460,8 @@ footer .middle .col-md-12 > div{
 }
 .bx-viewport {
     box-shadow: 0 0 10px #FF2222  !important;
+}
+.about-us{
+    background: black;
+    color: #c9aa5f
 }

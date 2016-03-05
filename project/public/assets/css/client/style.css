@@ -298,13 +298,12 @@ footer .middle .col-md-12 > div{
     position: absolute;
     /*bottom: 27px;*/
     background: url(../../img/client/jackpot.gif)no-repeat;
-    width: 420px;
+    width: 450px;
     background-size: 100% 100%;
     height: inherit;
     margin-right: auto;
     margin-left: auto;
-    left: 0;
-    right: 0;
+    right: 470px;
 }
 .jackpot_gif h4{
     margin-top: 35px;

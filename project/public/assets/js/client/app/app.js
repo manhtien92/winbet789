@@ -3,7 +3,7 @@
 	'use strict';
 
 	angular
-		.module('betApp', ['ui.router', 'satellizer', 'hokibetSlide'], function($interpolateProvider) {
+		.module('betApp', ['ui.router', 'satellizer', 'hokibetSlide', 'ngDialog'], function($interpolateProvider) {
 	        $interpolateProvider.startSymbol('<%');
 	        $interpolateProvider.endSymbol('%>');
 	    })
@@ -50,6 +50,31 @@
 
 			// Push the new factory onto the $http interceptor array
 			$httpProvider.interceptors.push('redirectWhenLoggedOut');
+
+			// Set up loading default when 
+			$httpProvider.interceptors.push(function($rootScope, $q) {
+
+			    return {
+
+			        request: function(config) {
+
+			            $rootScope.$broadcast('loading:show')
+			            return config
+			        },
+			        response: function(response) {
+
+			            $rootScope.$broadcast('loading:hide')
+			            return response
+			        },
+
+			        'responseError': function(rejection) {
+				      	// do something on error
+				      	$rootScope.$broadcast('loading:hide')
+
+				      	return $q.reject(rejection);
+				    }
+			    }
+			})
 
 			$authProvider.loginUrl = '/api/authenticate';
 
@@ -110,6 +135,16 @@
 					}		
 				}
 			});
+
+			// Show loading
+			$rootScope.$on('loading:show', function() {
+				$("#loading").show();
+			})
+
+			// Hide loading
+			$rootScope.$on('loading:hide', function() {
+			    $("#loading").hide();
+			})
 		});
 })();
 

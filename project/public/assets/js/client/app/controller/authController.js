@@ -7,7 +7,7 @@
         .controller('AuthController', AuthController);
 
 
-    function AuthController($auth, $state, $http, $rootScope, $scope) {
+    function AuthController($auth, $state, $http, $rootScope, $scope, ngDialog) {
         $scope.loginError = false;
         $scope.loginErrorText;
 
@@ -26,8 +26,7 @@
 
             // Handle errors
             }, function(error) {
-                $scope.loginError = true;
-                $scope.loginErrorText = error.data.error;
+                ngDialog.open({ template: 'assets/view/dialog/popupTmpl.html', className: 'ngdialog-theme-flat ngdialog-theme-custom'  });
 
             // Because we returned the $http.get request in the $auth.login
             // promise, we can chain the next promise to the end here

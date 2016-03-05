@@ -63,6 +63,28 @@
 		<div class="copyright_txt">© Copyright 2016 Hokibet188</div>
 	</div>
 </div>
+<div id='loading'>
+	<div class="spinner">
+	  	<div class="rect1"></div>
+	  	<div class="rect2"></div>
+	  	<div class="rect3"></div>
+	  	<div class="rect4"></div>
+	  	<div class="rect5"></div>
+	</div>
+</div>
+
+<script type="text/ng-template" id="popupTmpl.html">
+    <div class="popup_T1" style="background:#27ae60;text-align:center;position: absolute;width: 100%;left: 0;top: 0;">
+		<img style="height: 50px;width: 210px;" src="/upload/image/logowebsite-vinataobao.png" title="Mỹ phẩm xách tay - Vinataobao" alt="Mỹ phẩm xách tay - Vinataobao"/>
+	</div>
+	<div class="popup_Co">
+		<p class="text1">
+			Số lượng không hợp lệ</br>
+			Vui lòng chọn số lượng!
+		</p>
+	</div>
+</script>
+
 <div id="dialog" title="Notice">
   	<p class="dialog-content">Register Success</p>
 </div>
@@ -79,9 +101,11 @@
 <script src="assets/js/node_modules/angular/angular.js"></script>
 <script src="assets/js/node_modules/angular-ui-router/build/angular-ui-router.js"></script>
 <script src="assets/js/node_modules/satellizer/satellizer.js"></script>
+<script src="assets/js/node_modules/ng-dialog/js/ngDialog.min.js"></script>
 
-<!-- Application Scripts -->
+<!-- Application Angular -->
 <script src="assets/js/client/app/app.js"></script>
+
 
 <!-- Application Controller -->
 <script src="assets/js/client/app/controller/authController.js"></script>

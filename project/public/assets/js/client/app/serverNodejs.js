@@ -4,7 +4,6 @@
 
 $(document).ready(function () {
     socket.on('message', function(data) {
-        console.log(data)
     });
 });
 var email = '';
@@ -18,7 +17,6 @@ try{
         socket.emit('message', data1);
     });
     socket.on('message', function(data) {
-        console.log('datanode', data);
 
         switch (data.msgtype)
         {
@@ -29,7 +27,6 @@ try{
                 var href =$('a#logout').attr('href');
                 if(data.result==false && typeof (href) != 'undefined')
                 {
-                    console.log(data);
                     location.href =  href;
 
                 }

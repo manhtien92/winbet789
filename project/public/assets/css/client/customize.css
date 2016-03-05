@@ -131,3 +131,18 @@ a.dropdown-toggle:hover{
 .bx-wrapper{
     margin: 0 !important
 }
+.ngdialog.ngdialog-theme-flat .ngdialog-close:before{
+    background: #d24a1f;
+    border-bottom-left-radius: 2px;
+    width: 1.50em;
+    height: 1.50em;
+    line-height: 0.50em
+}
+.ngdialog.ngdialog-theme-flat .ngdialog-content{
+    border: 5px solid #d24a1f;
+    border-radius: 2px
+}
+.ngdialog.ngdialog-theme-flat .ngdialog-overlay{
+    background: #666666 url("../../img/client/ui-bg.png") 50% 50% repeat;
+    opacity: .5;
+}

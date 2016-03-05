@@ -89,12 +89,12 @@
 				.state('home', {
 					url: '/home',
 					templateUrl: baseUrl + 'assets/view/page/home.html',
-					controller: 'AuthController as user'
+					controller: 'AuthController'
 				})
 				.state('register', {
 					url: '/register',
 					templateUrl: baseUrl + 'assets/view/page/register.html',
-					controller: 'AuthController as user'
+					controller: 'RegisterController'
 				});
 		})
 		.run(function($rootScope, $state) {

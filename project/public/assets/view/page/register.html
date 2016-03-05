@@ -20,8 +20,8 @@
 							User name<sup class="required">*</sup>
 						</div>
 						<div class="col-md-6">
-							<input name='username' placeholder='Enter your username' />
-							<div class="ip-error username"></div>
+							<input ng-model='user.username' placeholder='Enter your username' />
+							<div class="ip-error"><%error.username%></div>
 						</div>
 					</div>
 					<div class="row">
@@ -29,12 +29,12 @@
 							Email Address<sup class="required">*</sup>
 						</div>
 						<div class="col-md-6">
-							<input name="email" placeholder="Email Address" />
+							<input ng-model="user.email" placeholder="Email Address" />
 							<div class="ip-notice">
 								Important*</br>
 								Correct email address is required for Password retrieval
 							</div>
-							<div class="ip-error email"></div>
+							<div class="ip-error"><%error.email%></div>
 						</div>
 					</div>
 					<div class="row">
@@ -42,8 +42,8 @@
 							Password<sup class="required">*</sup>
 						</div>
 						<div class="col-md-6">
-							<input type="password" name="password" placeholder="Enter your password" />
-							<div class="ip-error password"></div>
+							<input type="password" ng-model="user.password" placeholder="Enter your password" />
+							<div class="ip-error"><%error.password%></div>
 						</div>
 					</div>
 					<div class="row">
@@ -51,8 +51,8 @@
 							Confirm Password<sup class="required">*</sup>
 						</div>
 						<div class="col-md-6">
-							<input type="password" name="password_confirmation" placeholder="Re-enter password" />
-							<div class="ip-error password_confirmation"></div>
+							<input type="password" ng-model="user.password_confirmation" placeholder="Re-enter password" />
+							<div class="ip-error"><%error.password_confirmation%></div>
 						</div>
 					</div>
 					<div class="row">
@@ -60,12 +60,12 @@
 							Phone Number<sup class="required">*</sup>
 						</div>
 						<div class="col-md-6">
-							<input name="phone" placeholder="Your phone" />
+							<input ng-model="user.phone" placeholder="Your phone" />
 							<div class="ip-notice">
 								Important*
 								Please fill in the correct phone number, in order to make you easier when need to reset password
 							</div>
-							<div class="ip-error phone"></div>
+							<div class="ip-error"><%error.phone%></div>
 						</div>
 					</div>
 					<div class="row">
@@ -73,10 +73,10 @@
 							Currency<sup class="required">*</sup>
 						</div>
 						<div class="col-md-6">
-							<select name="currency">
+							<select ng-init="user.currency='IDR'" ng-model="user.currency" >
 								<option>IDR</option>
 							</select>
-							<div class="ip-error currency"></div>
+							<div class="ip-error"><%error.currency%></div>
 						</div>
 					</div>
 				</div>
@@ -91,13 +91,13 @@
 							Bank Name<sup class="required">*</sup>
 						</div>
 						<div class="col-md-6">
-							<select name='bank_name'>
-								<option>BANK BCA</option>
-								<option>BANK BNI</option>
-								<option>BANK BRI</option>
-								<option>BANK MANDIRI</option>
+							<select ng-init="user.bank_id='1'" ng-model='user.bank_id'>
+								<option value="1">BANK BCA</option>
+								<option value="2">BANK BNI</option>
+								<option value="3">BANK BRI</option>
+								<option value="4">BANK MANDIRI</option>
 							</select>
-							<div class="ip-error bank_name"></div>
+							<div class="ip-error"><%error.bank_id%></div>
 						</div>
 					</div>
 					<div class="row">
@@ -105,12 +105,12 @@
 							Bank Account No<sup class="required">*</sup>
 						</div>
 						<div class="col-md-6">
-							<input name="bank_account_number" placeholder="bank account number" />
+							<input ng-model="user.bank_account_number" placeholder="bank account number" />
 							<div class="ip-notice">
 								Important*
 								Please fill in the correct bank account number, in order to be easier when need to do withdrawal
 							</div>
-							<div class="ip-error bank_account_number"></div>
+							<div class="ip-error"><%error.bank_account_number%></div>
 						</div>
 					</div>
 					<div class="row">
@@ -118,21 +118,21 @@
 							Bank Account Name<sup class="required">*</sup>
 						</div>
 						<div class="col-md-6">
-							<input name="bank_account_name" placeholder="bank account name" />
-							<div class="ip-error bank_account_name"></div>
+							<input ng-model="user.bank_account_name" placeholder="bank account name" />
+							<div class="ip-error"><%error.bank_account_name%></div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row content-header condition">
 				<div class="col-md-12">
-					<input id="over18" type="checkbox" />
+					<input id="over18" type="checkbox" ng-model='state.condition' />
 					*I am over 18 years of age and have read and accepted Terms & Conditions, Privacy Policy & Betting Rules as published on this site.
 				</div>
 			</div>
 			<div class="row content-header">
 				<div class="col-md-offset-9 col-md-3 submit">
-					<button class="btn" type="submit">Submit</button>
+					<button ng-click="register()" class="btn" type="submit">Submit</button>
 				</div>
 			</div>
 		</div>

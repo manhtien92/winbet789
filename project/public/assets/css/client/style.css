@@ -151,7 +151,7 @@ sup.new{
 .method li{
     float: left;
     padding: 0 9px;
-    border-right: dashed 1px red;
+    border-right: 1px dotted #7f745f;
 }
 .method li:last-child{
     border-right: none
@@ -462,5 +462,5 @@ footer .middle .col-md-12 > div{
 }
 .about-us{
     background: black;
-    color: #c9aa5f
+    color: #d7c5a1
 }

@@ -109,6 +109,7 @@
 
 <!-- Application Controller -->
 <script src="assets/js/client/app/controller/authController.js"></script>
+<script src="assets/js/client/app/controller/registerController.js"></script>
 
 <!-- Application Directive -->
 <script src="assets/js/client/app/directive/hokibetSlide.js"></script>

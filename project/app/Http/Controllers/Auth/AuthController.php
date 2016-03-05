@@ -46,7 +46,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('jwt.auth', ['except' => ['authenticate']]);
+        $this->middleware('jwt.auth', ['except' => ['authenticate', 'create']]);
     }
 
     /**
@@ -58,12 +58,12 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name'      => 'required|min:3|max:60',
+            'username'      => 'required|min:3|max:60|unique:users',
             'email'     => 'required|email|max:60|unique:users',
             'password'  => 'required|confirmed|min:6|max:20',
             'phone'     => 'required|min:6|max:20',
             'currency'  => 'required|size:3',
-            'bank_name' => 'required|min:6|max:60',
+            'bank_id' => 'required|min:1|max:5',
             'bank_account_number'   => 'required|min:6|max:30',
             'bank_account_name'     => 'required|min:6|max:30',
         ]);
@@ -91,7 +91,7 @@ class AuthController extends Controller
 
         } else {
             // Set db column allow write
-            $user = $request->only('name', 'email', 'password', 'phone', 'currency', 'bank_name', 'bank_account_number', 'bank_account_name' );
+            $user = $request->only('username', 'email', 'password', 'phone', 'currency', 'bank_id', 'bank_account_number', 'bank_account_name' );
 
             // Genarate confirmation code
             $user['confirmation_code'] = str_random(30);
@@ -108,7 +108,8 @@ class AuthController extends Controller
                             ->to($user['email'])
                             ->replyTo('Hokibet188@gmail.com');
                 });
-                return response()->json(['result' => TRUE], 200);
+                $token = JWTAuth::attempt($request->only('username','password'));
+                return response()->json(compact('token'));
             }
         }
     }

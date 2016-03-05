@@ -34,9 +34,11 @@ Route::group(['middleware' => ['web']], function () {
         // Get current user
         Route::get('authenticate/user', 'Auth\AuthController@getAuthenticatedUser');
 
-        // Create new user
-        Route::put('user', 'Auth\AuthController@create');
+        
     });
+
+    // Create new user
+    Route::post('auth/signup', 'Auth\AuthController@create');
     
 	// Home page
 	Route::get('/', 'client\HomeController@index');

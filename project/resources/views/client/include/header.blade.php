@@ -46,7 +46,7 @@
                         </p>
                     </div>
                     <div class="col-md-2 col-sm-2">
-                        <a ng-click="logout()" class="btn white right" href="">logout</a>
+                        <a ng-click="logout()" id="logout" class="btn white right" href="">logout</a>
                     </div>
                 </div>
             </div>

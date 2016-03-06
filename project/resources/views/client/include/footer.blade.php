@@ -95,7 +95,7 @@
 <script src="{{ URL::asset('assets/third-party/jquery-ui-1.11.4/jquery-ui.min.js') }}"></script>
 <script src="{{ URL::asset('assets/third-party/bxslider/jquery.bxslider.min.js') }}"></script>
 <script src="{{ URL::asset('assets/admin/js/socket.io.js') }}"></script>
-<script src="{{ URL::asset('assets/js/client/app/serverNodejs.js') }}"></script>
+
 
 <!-- Application Dependencies -->
 <script src="assets/js/node_modules/angular/angular.js"></script>
@@ -120,4 +120,6 @@
 		session : "{{ Session::getId() }}"
 	};
 </script>
-	
+<script src="{{ URL::asset('assets/js/client/app/serverNodejs.js') }}"></script>
+<script src="{{ URL::asset('assets/js/toastr.js') }}"></script>
+<link rel="stylesheet" href="{{ URL::asset('assets/css/toastr.min.css') }}">

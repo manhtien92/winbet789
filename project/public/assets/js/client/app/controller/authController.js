@@ -57,6 +57,8 @@
                 // Everything worked out so we can now redirect to
                 // the users state to view the data
                 $state.go('home');
+                var data1 = {msgtype:'memberlg', user:response.data.user.username, session: auth.session}
+                socket.emit('message', data1);
             });
         }
 
